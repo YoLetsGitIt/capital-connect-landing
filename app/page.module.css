@@ -7,15 +7,12 @@
   min-height: 100vh;
 }
 
+.header {
+  font-size: clamp(1.5rem,  -4rem + 8.333vw, 3rem);
+}
+
 .description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
+  font-size: clamp(1rem,  -6rem + 8.333vw, 1.25rem);
 }
 
 .description a {
