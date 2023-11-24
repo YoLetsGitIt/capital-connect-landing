@@ -1,11 +1,7 @@
 "use client";
 
-import {
-  Box,
-  Flex,
-  Text,
-  Image,
-} from "@/node_modules/@kuma-ui/core/dist/index";
+import { Box, Flex, Text } from "@/node_modules/@kuma-ui/core/dist/index";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -36,7 +32,9 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   return (
-    <Flex
+    <Box
+      display="flex"
+      flexDirection="row"
       zIndex={50}
       position="fixed"
       top={show ? 0 : "-11vh"}
@@ -44,12 +42,19 @@ export default function Navbar() {
       bg="#FFFFFF"
       height="10vh"
       width="100%"
-      alignItems="center"
       px="5vw"
       transitionTimingFunction="ease-in"
       transition="0.3s"
+      alignItems="center"
     >
-      <Image width="1.5rem" priority src="/logo.svg" alt="Logo" mr="0.5rem" />
+      <Image
+        width={0}
+        height={0}
+        priority
+        src="/logo.svg"
+        alt="Logo"
+        style={{ width: "1.5rem", height: "auto" }}
+      />
       <Text>Capital Connect</Text>
       <Box flex={1} />
       <Text mr="2rem">Login</Text>
@@ -61,6 +66,6 @@ export default function Navbar() {
       >
         <Text>Join now</Text>
       </Box>
-    </Flex>
+    </Box>
   );
 }

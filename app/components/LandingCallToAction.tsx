@@ -12,13 +12,13 @@ export default function LandingCallToAction() {
     gsap.fromTo(
       ".callToAction",
       {
-        y: 100,
+        y: 50,
         opacity: 0,
       },
       {
         y: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
         scrollTrigger: {
           trigger: ".callToAction",
           toggleActions: "restart none none none",

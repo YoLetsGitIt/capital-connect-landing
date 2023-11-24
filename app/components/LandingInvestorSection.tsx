@@ -1,6 +1,7 @@
 "use client";
 
-import { Flex, Box, Heading, Text, Button, Image, HStack } from "@kuma-ui/core";
+import { Flex, Box, Heading, Text, HStack } from "@kuma-ui/core";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -12,28 +13,31 @@ export default function LandingInvestorSection() {
     gsap.fromTo(
       ".searchImage",
       {
-        x: -300,
+        x: -50,
+        opacity: 0,
       },
       {
         scrollTrigger: {
           trigger: ".searchImage",
           toggleActions: "restart none none none",
         },
+        delay: 0.5,
         x: 0,
+        opacity: 1,
         ease: "power2.out",
-        duration: 1.5,
+        duration: 1,
       }
     );
     gsap.fromTo(
       ".searchContent",
       {
-        y: 100,
+        y: 50,
         opacity: 0,
       },
       {
         y: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
         scrollTrigger: {
           trigger: ".searchImage",
           toggleActions: "restart none none none",
@@ -46,10 +50,13 @@ export default function LandingInvestorSection() {
     <Flex alignItems="center" height="100vh" px="14vw" bg="#FFFFFF">
       <Box flex={1}>
         <Image
+          width={0}
+          height={0}
           className="searchImage"
           priority
           src="/search.svg"
           alt="Searching on mobile phone"
+          style={{ width: "75%", height: "auto" }}
         ></Image>
       </Box>
       <Box className="searchContent" flex={1}>

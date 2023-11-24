@@ -1,11 +1,7 @@
 "use client";
 
-import {
-  Box,
-  Flex,
-  Text,
-  Image,
-} from "@/node_modules/@kuma-ui/core/dist/index";
+import { Box, Flex, Text } from "@/node_modules/@kuma-ui/core/dist/index";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 
@@ -37,6 +33,7 @@ export default function Footer() {
           .map((x, i) => {
             return (
               <Box
+                key={i}
                 className={`building`}
                 bg="#001633"
                 width="5vw"
@@ -47,11 +44,12 @@ export default function Footer() {
       </Flex>
       <Box position="relative" bottom={maxHeight / 1.5} textAlign="center">
         <Image
-          width="2rem"
+          width={0}
+          height={0}
           priority
           src="/logo-dark.svg"
           alt="Logo"
-          mr="0.5rem"
+          style={{ width: "2rem", height: "auto" }}
         />
         <Text color="#fff" fontSize="1.5rem" mb="1rem">
           Capital Connect

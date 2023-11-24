@@ -1,6 +1,7 @@
 "use client";
 
-import { Flex, Box, Heading, Text, Button, Image, HStack } from "@kuma-ui/core";
+import { Flex, Box, Heading, Text, Button } from "@kuma-ui/core";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -39,10 +40,12 @@ export default function Landing() {
       </Box>
       <Box flex={1} display={["none", "block"]}>
         <Image
-          width="100%"
+          width={0}
+          height={0}
           priority
           src="/landing.svg"
           alt="Landing image"
+          style={{ width: "100%", height: "auto" }}
         ></Image>
       </Box>
     </Flex>

@@ -1,6 +1,7 @@
 "use client";
 
-import { Flex, Box, Heading, Text, Button, Image, HStack } from "@kuma-ui/core";
+import { Flex, Box, Heading, Text } from "@kuma-ui/core";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -12,28 +13,31 @@ export default function LandingDeveloperSection() {
     gsap.fromTo(
       ".presentationImage",
       {
-        x: 300,
+        x: 50,
+        opacity: 0,
       },
       {
         scrollTrigger: {
           trigger: ".presentationImage",
           toggleActions: "restart none none none",
         },
+        delay: 0.5,
         x: 0,
+        opacity: 1,
         ease: "power2.out",
-        duration: 1.5,
+        duration: 1,
       }
     );
     gsap.fromTo(
       ".presentationContent",
       {
-        y: 100,
+        y: 50,
         opacity: 0,
       },
       {
         y: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
         scrollTrigger: {
           trigger: ".presentationImage",
           toggleActions: "restart none none none",
@@ -62,11 +66,13 @@ export default function LandingDeveloperSection() {
       </Box>
       <Box flex={1}>
         <Image
+          width={0}
+          height={0}
           className="presentationImage"
           priority
           src="/pitching.svg"
           alt="Landing image"
-          width="40vw"
+          style={{ width: "40vw", height: "auto" }}
         ></Image>
       </Box>
     </Flex>
