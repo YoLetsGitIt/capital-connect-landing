@@ -15,7 +15,10 @@ export default function LandingDeveloperSection() {
         x: 300,
       },
       {
-        scrollTrigger: ".presentationImage",
+        scrollTrigger: {
+          trigger: ".presentationImage",
+          toggleActions: "restart none none none",
+        },
         x: 0,
         ease: "power2.out",
         duration: 1.5,
@@ -31,7 +34,10 @@ export default function LandingDeveloperSection() {
         y: 0,
         opacity: 1,
         duration: 1.5,
-        scrollTrigger: ".presentationImage",
+        scrollTrigger: {
+          trigger: ".presentationImage",
+          toggleActions: "restart none none none",
+        },
       }
     );
   }, []);

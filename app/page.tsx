@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { useEffect } from "react";
+import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import LandingCallToAction from "./components/LandingCallToAction";
 import LandingDeveloperSection from "./components/LandingDeveloperSection";
@@ -33,6 +34,7 @@ export default function Home() {
       <LandingInvestorSection />
       <LandingDeveloperSection />
       <LandingCallToAction />
+      <Footer />
     </Box>
   );
 }

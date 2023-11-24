@@ -37,6 +37,7 @@ export default function Navbar() {
 
   return (
     <Flex
+      zIndex={50}
       position="fixed"
       top={show ? 0 : "-11vh"}
       boxShadow="0px 2px 2px #00000040"

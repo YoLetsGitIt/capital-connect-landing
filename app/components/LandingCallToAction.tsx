@@ -19,7 +19,10 @@ export default function LandingCallToAction() {
         y: 0,
         opacity: 1,
         duration: 1.5,
-        scrollTrigger: ".callToAction",
+        scrollTrigger: {
+          trigger: ".callToAction",
+          toggleActions: "restart none none none",
+        },
       }
     );
   }, []);
