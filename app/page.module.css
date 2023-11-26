@@ -8,11 +8,11 @@
 }
 
 .header {
-  font-size: clamp(1.5rem,  -4rem + 8.333vw, 3rem);
+  font-size: clamp(2.25rem,  -4rem + 8.333vw, 3rem);
 }
 
 .description {
-  font-size: clamp(1rem,  -6rem + 8.333vw, 1.25rem);
+  font-size: clamp(1.25rem,  -6rem + 8.333vw, 1.25rem);
 }
 
 .description a {

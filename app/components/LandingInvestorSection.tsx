@@ -47,8 +47,14 @@ export default function LandingInvestorSection() {
   }, []);
 
   return (
-    <Flex alignItems="center" height="100vh" px="14vw" bg="#FFFFFF">
-      <Box flex={1}>
+    <Flex
+      alignItems="center"
+      height={["auto", "100vh"]}
+      pt={["10vh", 0]}
+      px="10vw"
+      bg="#FFFFFF"
+    >
+      <Box flex={1} display={["none", "block"]}>
         <Image
           width={0}
           height={0}

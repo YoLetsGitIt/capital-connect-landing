@@ -4,6 +4,7 @@ import { Flex, Box, Heading, Text, Button, Image, HStack } from "@kuma-ui/core";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
+import styles from "../page.module.css";
 
 export default function LandingCallToAction() {
   gsap.registerPlugin(ScrollTrigger);
@@ -34,11 +35,11 @@ export default function LandingCallToAction() {
         alignItems="center"
         justifyContent="center"
         borderRadius="3rem"
-        px="20vw"
+        px={["10vw", "20vw"]}
         flexDirection="column"
         className="callToAction"
       >
-        <Heading textAlign="center" pb="4rem" fontSize="2.5rem">
+        <Heading textAlign="center" pb="4rem" style={[styles.header]}>
           Join the community of developers and investors on Capital Connect
         </Heading>
         <Button

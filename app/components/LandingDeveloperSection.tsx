@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex, Box, Heading, Text } from "@kuma-ui/core";
+import { Flex, Box, Heading, Text, HStack } from "@kuma-ui/core";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -50,8 +50,9 @@ export default function LandingDeveloperSection() {
     <Flex
       className="thirdSection"
       alignItems="center"
-      height="100vh"
+      height={["auto", "100vh"]}
       px="10vw"
+      py={["10vh", 0]}
       bg="#FFFFFF"
     >
       <Box className="presentationContent" flex={1} mr="6vw">
@@ -62,9 +63,24 @@ export default function LandingDeveloperSection() {
           List your project for our keen investors to view. Start conversations
           to help fund your project.
         </Text>
-        <Text>• Access to relevant project information</Text>
+        <HStack>
+          <Text mb="1rem" fontWeight="bold" fontSize="1.25rem" mr="1rem">
+            •
+          </Text>
+          <Text mb="1rem" fontWeight="bold" fontSize="1.25rem">
+            Steamlined uploading process
+          </Text>
+        </HStack>
+        <HStack>
+          <Text mb="1rem" fontWeight="bold" fontSize="1.25rem" mr="1rem">
+            •
+          </Text>
+          <Text mb="1rem" fontWeight="bold" fontSize="1.25rem">
+            Gain access to a group of investors
+          </Text>
+        </HStack>
       </Box>
-      <Box flex={1}>
+      <Box flex={1} display={["none", "block"]}>
         <Image
           width={0}
           height={0}

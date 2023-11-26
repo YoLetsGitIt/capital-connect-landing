@@ -22,7 +22,7 @@ export default function Landing() {
         >
           The best online marketplace to find
         </Heading>
-        <Text mb="3rem" color="#666666" className={styles.description}>
+        <Text mb="3rem" color="#666666" fontSize="1.25rem">
           Find the perfect deal for you in our community of active investors and
           developers.
         </Text>

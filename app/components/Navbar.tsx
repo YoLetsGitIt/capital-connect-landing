@@ -11,7 +11,6 @@ export default function Navbar() {
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
       // if scroll down hide the navbar
-      console.log(show ? 0 : "-10vh");
       setShow(false);
     } else {
       // if scroll up show the navbar
@@ -41,7 +40,7 @@ export default function Navbar() {
       boxShadow="0px 2px 2px #00000040"
       bg="#FFFFFF"
       height="10vh"
-      width="100%"
+      width="100vw"
       px="5vw"
       transitionTimingFunction="ease-in"
       transition="0.3s"
@@ -53,7 +52,7 @@ export default function Navbar() {
         priority
         src="/logo.svg"
         alt="Logo"
-        style={{ width: "1.5rem", height: "auto" }}
+        style={{ width: "1.5rem", height: "auto", marginRight: "0.5rem" }}
       />
       <Text>Capital Connect</Text>
       <Box flex={1} />

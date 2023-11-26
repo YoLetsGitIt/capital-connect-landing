@@ -11,6 +11,10 @@ export default function Footer() {
 
   const numberOfBuildings = 20;
 
+  function getRandomHeight() {
+    return Math.random() * (maxHeight - minHeight) + minHeight;
+  }
+
   useEffect(() => {
     gsap.to(`.building`, {
       height: `random(${minHeight + 10}, ${maxHeight}, 1)`,
@@ -37,7 +41,7 @@ export default function Footer() {
                 className={`building`}
                 bg="#001633"
                 width="5vw"
-                height={i % 2 === 0 ? minHeight : maxHeight}
+                height={i % 2 === 0 ? minHeight + i * 3 : maxHeight - i * 3}
               />
             );
           })}
