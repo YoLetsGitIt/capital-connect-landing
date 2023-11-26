@@ -11,10 +11,6 @@ export default function Footer() {
 
   const numberOfBuildings = 20;
 
-  function getRandomHeight() {
-    return Math.random() * (maxHeight - minHeight) + minHeight;
-  }
-
   useEffect(() => {
     gsap.to(`.building`, {
       height: `random(${minHeight + 10}, ${maxHeight}, 1)`,

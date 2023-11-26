@@ -5,9 +5,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { useEffect } from "react";
-import Home from "./home/page";
+import Footer from "./components/Footer";
+import Landing from "./components/Landing";
+import LandingCallToAction from "./components/LandingCallToAction";
+import LandingDeveloperSection from "./components/LandingDeveloperSection";
+import LandingInvestorSection from "./components/LandingInvestorSection";
+import Navbar from "./components/Navbar";
 
-export default function TopLevel() {
+export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(TextPlugin);
 
@@ -23,7 +28,12 @@ export default function TopLevel() {
 
   return (
     <Box>
-      <Home />
+      <Navbar />
+      <Landing />
+      <LandingInvestorSection />
+      <LandingDeveloperSection />
+      <LandingCallToAction />
+      <Footer />
     </Box>
   );
 }

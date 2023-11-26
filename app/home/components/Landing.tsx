@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import styles from "../page.module.css";
+import styles from "../../page.module.css";
 
 export default function Landing() {
   gsap.registerPlugin(ScrollTrigger);
