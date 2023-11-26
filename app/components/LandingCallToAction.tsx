@@ -39,7 +39,7 @@ export default function LandingCallToAction() {
         flexDirection="column"
         className="callToAction"
       >
-        <Heading textAlign="center" pb="4rem" style={[styles.header]}>
+        <Heading textAlign="center" pb="4rem" style={[styles.header].join(" ")}>
           Join the community of developers and investors on Capital Connect
         </Heading>
         <Button
