@@ -27,7 +27,7 @@ export default function Footer() {
 
   return (
     <Box className="footer" flex={1} height={maxHeight} alignItems="center">
-      <Flex flex={1} alignItems="flex-end">
+      <Box display="flex" flexDirection="row" flex={1} alignItems="flex-end">
         {Array(numberOfBuildings)
           .fill(0)
           .map((x, i) => {
@@ -41,7 +41,7 @@ export default function Footer() {
               />
             );
           })}
-      </Flex>
+      </Box>
       <Box position="relative" bottom={maxHeight / 1.5} textAlign="center">
         <Image
           width={0}
