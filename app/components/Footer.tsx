@@ -52,7 +52,7 @@ const Footer = ({ background }: { background: string }) => {
         <Image
           width={0}
           height={0}
-          priority="true"
+          priority={true}
           src="/logo-dark.svg"
           alt="Logo"
           style={{ width: "2rem", height: "auto" }}
