@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 
-const Footer = ({ background }: { background?: string }) => {
+const Footer = ({ background }: { background: string }) => {
   const maxHeight = 400;
   const minHeight = 350;
 
@@ -27,7 +27,7 @@ const Footer = ({ background }: { background?: string }) => {
 
   return (
     <Box
-      bg={background ? background : "#FFFFFF"}
+      bg={background}
       className="footer"
       flex={1}
       height={maxHeight}

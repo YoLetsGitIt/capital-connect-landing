@@ -33,7 +33,7 @@ export default function Home() {
       <LandingInvestorSection />
       <LandingDeveloperSection />
       <LandingCallToAction />
-      <Footer />
+      <Footer background="#FFFFFF" />
     </Box>
   );
 }
