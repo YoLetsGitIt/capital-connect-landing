@@ -74,7 +74,6 @@ export default function Pricing() {
             <Image
               width={0}
               height={0}
-              priority={true}
               src={"/tick.svg"}
               alt="Logo"
               style={{
@@ -95,7 +94,6 @@ export default function Pricing() {
               <Image
                 width={0}
                 height={0}
-                priority
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
@@ -122,7 +120,6 @@ export default function Pricing() {
             <Image
               width={0}
               height={0}
-              priority={true}
               src={"/tick.svg"}
               alt="Logo"
               style={{
@@ -143,7 +140,6 @@ export default function Pricing() {
               <Image
                 width={0}
                 height={0}
-                priority={true}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
@@ -170,7 +166,6 @@ export default function Pricing() {
             <Image
               width={0}
               height={0}
-              priority={true}
               src={"/tick.svg"}
               alt="Logo"
               style={{
@@ -191,7 +186,6 @@ export default function Pricing() {
               <Image
                 width={0}
                 height={0}
-                priority={true}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
@@ -218,7 +212,6 @@ export default function Pricing() {
             <Image
               width={0}
               height={0}
-              priority={true}
               src={"/tick.svg"}
               alt="Logo"
               style={{
@@ -239,7 +232,6 @@ export default function Pricing() {
               <Image
                 width={0}
                 height={0}
-                priority={true}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
@@ -266,7 +258,6 @@ export default function Pricing() {
             <Image
               width={0}
               height={0}
-              priority={true}
               src={"/remove.svg"}
               alt="Logo"
               style={{
@@ -287,7 +278,6 @@ export default function Pricing() {
               <Image
                 width={0}
                 height={0}
-                priority={true}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
@@ -314,7 +304,6 @@ export default function Pricing() {
             <Image
               width={0}
               height={0}
-              priority={true}
               src={"/remove.svg"}
               alt="Logo"
               style={{
@@ -335,7 +324,6 @@ export default function Pricing() {
               <Image
                 width={0}
                 height={0}
-                priority={true}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
@@ -362,7 +350,6 @@ export default function Pricing() {
             <Image
               width={0}
               height={0}
-              priority={true}
               src={"/remove.svg"}
               alt="Logo"
               style={{
@@ -383,7 +370,6 @@ export default function Pricing() {
               <Image
                 width={0}
                 height={0}
-                priority={true}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
