@@ -98,7 +98,7 @@ export default function Developers() {
                 height: "auto",
                 transform: `translatey(0px)`,
                 animation: "float 6s ease-in-out infinite",
-                "animation-delay": "-2.5s",
+                animationDelay: "-2.5s",
               }}
             />
             <Image
@@ -115,7 +115,7 @@ export default function Developers() {
                 height: "auto",
                 transform: `translatey(0px)`,
                 animation: "float 6s ease-in-out infinite",
-                "animation-delay": "-0.7s",
+                animationDelay: "-0.7s",
               }}
             />
             <Image
@@ -132,7 +132,7 @@ export default function Developers() {
                 height: "auto",
                 transform: `translatey(0px)`,
                 animation: "float 6s ease-in-out infinite",
-                "animation-delay": "-4.3s",
+                animationDelay: "-4.3s",
               }}
             />
             <Image
@@ -150,7 +150,7 @@ export default function Developers() {
                 height: "auto",
                 transform: `translatey(0px)`,
                 animation: "float 6s ease-in-out infinite",
-                "animation-delay": "-5.9s",
+                animationDelay: "-5.9s",
               }}
             />
           </Flex>
