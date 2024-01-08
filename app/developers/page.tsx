@@ -48,9 +48,112 @@ export default function Developers() {
           </Box>
         </Flex>
         <Flex minHeight="80vh" alignItems="center">
-          <Box flex={1}>
-            <Text>Image</Text>
-          </Box>
+          <Flex flex={1} height="80vh" style={{ position: "relative" }}>
+            <Image
+              width={0}
+              height={0}
+              src="/person1.svg"
+              alt="Project upload form"
+              borderRadius="8rem"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "8rem",
+                height: "auto",
+                transform: `translatey(0px)`,
+                animation: "float 6s ease-in-out infinite",
+              }}
+            />
+            <Image
+              width={0}
+              height={0}
+              src="/gmail.svg"
+              alt="Project upload form"
+              borderRadius="1.5rem"
+              p="1rem"
+              style={{
+                position: "absolute",
+                top: 10,
+                right: "20vh",
+                width: "6rem",
+                height: "auto",
+                transform: `translatey(0px)`,
+                animation: "float 6s ease-in-out infinite",
+                "animation-delay": "-4.5s",
+              }}
+            />
+            <Image
+              width={0}
+              height={0}
+              src="/iosCall.svg"
+              alt="Project upload form"
+              borderRadius="1rem"
+              p="1rem"
+              style={{
+                position: "absolute",
+                top: "20vh",
+                left: "15vw",
+                width: "5rem",
+                height: "auto",
+                transform: `translatey(0px)`,
+                animation: "float 6s ease-in-out infinite",
+                "animation-delay": "-2.5s",
+              }}
+            />
+            <Image
+              width={0}
+              height={0}
+              src="/person2.svg"
+              alt="Project upload form"
+              borderRadius="7rem"
+              style={{
+                position: "absolute",
+                top: "40vh",
+                right: "10vw",
+                width: "8rem",
+                height: "auto",
+                transform: `translatey(0px)`,
+                animation: "float 6s ease-in-out infinite",
+                "animation-delay": "-0.7s",
+              }}
+            />
+            <Image
+              width={0}
+              height={0}
+              src="/person3.svg"
+              alt="Project upload form"
+              borderRadius="7rem"
+              style={{
+                position: "absolute",
+                bottom: "10vh",
+                left: "2vw",
+                width: "7rem",
+                height: "auto",
+                transform: `translatey(0px)`,
+                animation: "float 6s ease-in-out infinite",
+                "animation-delay": "-4.3s",
+              }}
+            />
+            <Image
+              width={0}
+              height={0}
+              src="/whatsapp.svg"
+              alt="Project upload form"
+              borderRadius="1.5rem"
+              p="1rem"
+              style={{
+                position: "absolute",
+                top: "30vh",
+                left: "5vw",
+                width: "5rem",
+                height: "auto",
+                transform: `translatey(0px)`,
+                animation: "float 6s ease-in-out infinite",
+                "animation-delay": "-5.9s",
+              }}
+            />
+          </Flex>
           <Box flex={1} pb="20vh">
             <Text fontWeight="bold" fontSize="1.75rem" pb="1rem">
               2 - Organise funding with investors
