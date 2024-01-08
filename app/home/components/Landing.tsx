@@ -2,18 +2,17 @@
 
 import { Flex, Box, Heading, Text, Button } from "@kuma-ui/core";
 import Image from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
 import styles from "../../page.module.css";
 
 export default function Landing() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {}, []);
-
   return (
-    <Flex alignItems="center" height="100vh" px="17.5vw" bg="#CCE2FF">
+    <Flex
+      alignItems="center"
+      minHeight="100vh"
+      px="17.5vw"
+      bg="#CCE2FF"
+      pt={["6rem", 0]}
+    >
       <Box mr="6vw" flex={1}>
         <Heading
           fontWeight="bold"
@@ -34,6 +33,8 @@ export default function Landing() {
           borderRadius="2rem"
           fontWeight="bold"
           fontSize="1rem"
+          borderWidth={0}
+          borderColor="#002C66"
         >
           View projects
         </Button>
@@ -46,7 +47,7 @@ export default function Landing() {
           src="/landing.svg"
           alt="Landing image"
           style={{ width: "100%", height: "auto" }}
-        ></Image>
+        />
       </Box>
     </Flex>
   );

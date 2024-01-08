@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { KumaRegistry } from "@kuma-ui/next-plugin/registry";
+import Navbar from "./components/Navbar";
 
 const dmsans = DM_Sans({
   subsets: ["latin"],

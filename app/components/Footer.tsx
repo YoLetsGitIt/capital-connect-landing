@@ -1,11 +1,11 @@
 "use client";
 
-import { Box, Flex, Text } from "@/node_modules/@kuma-ui/core/dist/index";
+import { Box, Flex, Text } from "@kuma-ui/core";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 
-export default function Footer() {
+const Footer = ({ background }: { background?: string }) => {
   const maxHeight = 400;
   const minHeight = 350;
 
@@ -26,7 +26,13 @@ export default function Footer() {
   }, []);
 
   return (
-    <Box className="footer" flex={1} height={maxHeight} alignItems="center">
+    <Box
+      bg={background ? background : "#FFFFFF"}
+      className="footer"
+      flex={1}
+      height={maxHeight}
+      alignItems="center"
+    >
       <Box display="flex" flexDirection="row" flex={1} alignItems="flex-end">
         {Array(numberOfBuildings)
           .fill(0)
@@ -46,7 +52,7 @@ export default function Footer() {
         <Image
           width={0}
           height={0}
-          priority
+          priority="true"
           src="/logo-dark.svg"
           alt="Logo"
           style={{ width: "2rem", height: "auto" }}
@@ -58,4 +64,6 @@ export default function Footer() {
       </Box>
     </Box>
   );
-}
+};
+
+export default Footer;
