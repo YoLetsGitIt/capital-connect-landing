@@ -80,7 +80,7 @@ export default function Developers() {
                 height: "auto",
                 transform: `translatey(0px)`,
                 animation: "float 6s ease-in-out infinite",
-                "animation-delay": "-4.5s",
+                animationDelay: "-4.5s",
               }}
             />
             <Image
