@@ -15,15 +15,28 @@ export default function Developers() {
         <Text textAlign="center" pb="2rem">
           Find funding for your project, quick and easy
         </Text>
-        <Flex minHeight="80vh" alignItems="center">
-          <Box flex={1} pb="30vh">
-            <Box ml="4rem">
+        <Flex
+          minHeight="80vh"
+          alignItems="center"
+          flexDirection={["column", "row"]}
+        >
+          <Box flex={1} pt={["2rem", 0]} pb={["3rem", "30vh"]}>
+            <Box ml={[0, "4rem"]}>
               <Text fontWeight="bold" fontSize="1.75rem" pb="1rem">
                 1 - Prepare your listing
               </Text>
               <Text pb="2rem" color="#404040">
                 Enter information about your project
               </Text>
+              <Box display={["block", "none"]} pb="3rem">
+                <Image
+                  width={0}
+                  height={0}
+                  src="/project-upload-form.svg"
+                  alt="Project upload form"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </Box>
               <VStack>
                 <Text fontWeight="bold" fontSize="1.25rem" pb="1rem">
                   - Description of the project
@@ -37,7 +50,7 @@ export default function Developers() {
               </VStack>
             </Box>
           </Box>
-          <Box flex={1.25} mb="10vh">
+          <Box display={["none", "block"]} flex={1.25} mb="10vh">
             <Image
               width={0}
               height={0}
@@ -47,8 +60,13 @@ export default function Developers() {
             />
           </Box>
         </Flex>
-        <Flex minHeight="80vh" alignItems="center">
-          <Flex flex={1} height="80vh" style={{ position: "relative" }}>
+        <Flex alignItems="center" flexDirection={["column", "row"]}>
+          <Flex
+            display={["none", "block"]}
+            flex={1}
+            height="80vh"
+            style={{ position: "relative" }}
+          >
             <Image
               width={0}
               height={0}
@@ -158,9 +176,56 @@ export default function Developers() {
             <Text fontWeight="bold" fontSize="1.75rem" pb="1rem">
               2 - Organise funding with investors
             </Text>
-            <Text pb="2rem" color="#404040">
+            <Text pb={["1rem", "2rem"]} color="#404040">
               Exposure to a community of active investors
             </Text>
+            <Flex
+              display={["flex", "none"]}
+              pb="2rem"
+              flexDirection="row"
+              justify="space-between"
+              alignItems="center"
+            >
+              <Image
+                width={0}
+                height={0}
+                src="/iosCall.svg"
+                alt="Project upload form"
+                borderRadius="1.5rem"
+                p="1rem"
+                boxShadow="0 5px 15px 0px rgba(0,0,0,0.6)"
+                style={{
+                  width: "5rem",
+                  height: "auto",
+                }}
+              />
+              <Image
+                width={0}
+                height={0}
+                src="/gmail.svg"
+                alt="Project upload form"
+                borderRadius="1.5rem"
+                p="1rem"
+                boxShadow="0 5px 15px 0px rgba(0,0,0,0.6)"
+                style={{
+                  width: "5rem",
+                  height: "auto",
+                }}
+              />
+              <Image
+                width={0}
+                height={0}
+                src="/whatsapp.svg"
+                alt="Project upload form"
+                borderRadius="1.5rem"
+                p="1rem"
+                boxShadow="0 5px 15px 0px rgba(0,0,0,0.6)"
+                style={{
+                  width: "5rem",
+                  height: "auto",
+                }}
+              />
+            </Flex>
             <VStack>
               <Text fontWeight="bold" fontSize="1.25rem" pb="1rem">
                 - Only serious investors will contact you

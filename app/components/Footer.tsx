@@ -67,7 +67,6 @@ const Footer = ({ background }: { background: string }) => {
                   width={0}
                   height={0}
                   style={{ width: "5vw", height: "auto", marginBottom: -6 }}
-                  bg="red"
                 />
                 <Box
                   className={`building`}
