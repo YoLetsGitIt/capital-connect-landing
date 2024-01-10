@@ -64,6 +64,7 @@ const Footer = ({ background }: { background: string }) => {
               <Box key={i}>
                 <Image
                   src={buildingImageOrder[i]}
+                  alt="building silhouette"
                   width={0}
                   height={0}
                   style={{ width: "5vw", height: "auto", marginBottom: -6 }}
