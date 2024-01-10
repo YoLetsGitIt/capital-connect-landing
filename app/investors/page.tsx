@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Text, Button } from "@kuma-ui/core";
+import { Box, Flex, Text, Button, Image } from "@kuma-ui/core";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -34,7 +34,15 @@ export default function Investors() {
             View projects
           </Button>
         </Box>
-        <Box flex={1}></Box>
+        <Box flex={1}>
+          <Image
+            width={0}
+            height={0}
+            src="/investors-project-view.svg"
+            alt="Project upload form"
+            style={{ width: "80%", height: "auto" }}
+          />
+        </Box>
       </Flex>
       <Footer background="#CCE2FF" />
     </Box>

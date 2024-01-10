@@ -37,14 +37,45 @@ const Footer = ({ background }: { background: string }) => {
         {Array(numberOfBuildings)
           .fill(0)
           .map((x, i) => {
+            const buildingImageOrder = [
+              "/building1.svg",
+              "/building1.svg",
+              "/building2.svg",
+              "/building3.svg",
+              "/building1.svg",
+              "/building2.svg",
+              "/building1.svg",
+              "/building2.svg",
+              "/building1.svg",
+              "/building3.svg",
+              "/building1.svg",
+              "/building1.svg",
+              "/building1.svg",
+              "/building1.svg",
+              "/building3.svg",
+              "/building1.svg",
+              "/building2.svg",
+              "/building1.svg",
+              "/building5.svg",
+              "/building1.svg",
+            ];
+
             return (
-              <Box
-                key={i}
-                className={`building`}
-                bg="#001633"
-                width="5vw"
-                height={i % 2 === 0 ? minHeight + i * 3 : maxHeight - i * 3}
-              />
+              <Box key={i}>
+                <Image
+                  src={buildingImageOrder[i]}
+                  width={0}
+                  height={0}
+                  style={{ width: "5vw", height: "auto", marginBottom: -6 }}
+                  bg="red"
+                />
+                <Box
+                  className={`building`}
+                  bg="#001633"
+                  width="5vw"
+                  height={i % 2 === 0 ? minHeight + i * 3 : maxHeight - i * 3}
+                />
+              </Box>
             );
           })}
       </Box>

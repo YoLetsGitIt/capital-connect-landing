@@ -35,6 +35,7 @@ export default function Landing() {
           fontSize="1rem"
           borderWidth={0}
           borderColor="#002C66"
+          mb={["2rem", 0]}
         >
           View projects
         </Button>

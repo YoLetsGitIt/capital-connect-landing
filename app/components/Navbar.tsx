@@ -299,7 +299,10 @@ const Navbar = ({
           </Link>
           <Link
             href="/investors"
-            style={{ textDecoration: "none", color: "#000000" }}
+            style={{
+              textDecoration: "none",
+              color: "#000000",
+            }}
           >
             <Text
               fontSize="1.25rem"
@@ -433,7 +436,7 @@ const Navbar = ({
         </Box>
       </Box>
       <Box
-        pt="1rem"
+        pt={atTop ? "1rem" : 0}
         px="5vw"
         boxShadow="0px 2px 2px #00000040"
         bg="#FFFFFF"
