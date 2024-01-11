@@ -336,7 +336,7 @@ export default function Pricing() {
         </HStack>
         <HStack mb="4rem">
           <Flex flex={4} bg="#FFFFFF" borderRadius="0.5rem" alignItems="center">
-            <Text ml="1.5rem">Feasbility analysis</Text>
+            <Text ml="1.5rem">Feasibility analysis</Text>
           </Flex>
           <Flex
             mx="1rem"

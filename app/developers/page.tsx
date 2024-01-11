@@ -38,15 +38,42 @@ export default function Developers() {
                 />
               </Box>
               <VStack>
-                <Text fontWeight="bold" fontSize="1.25rem" pb="1rem">
-                  - Description of the project
-                </Text>
-                <Text fontWeight="bold" fontSize="1.25rem" pb="1rem">
-                  - Project metrics
-                </Text>
-                <Text fontWeight="bold" fontSize="1.25rem" pb="1rem">
-                  - Relevant documents
-                </Text>
+                <Flex alignItems="center" pb="1rem">
+                  <Image
+                    width={0}
+                    height={0}
+                    src="/dot-point.svg"
+                    alt="Dot point"
+                    style={{ width: "1rem", height: "auto" }}
+                  />
+                  <Text ml="1rem" fontWeight="bold" fontSize="1.25rem">
+                    Description of the project
+                  </Text>
+                </Flex>
+                <Flex alignItems="center" pb="1rem">
+                  <Image
+                    width={0}
+                    height={0}
+                    src="/dot-point.svg"
+                    alt="Dot point"
+                    style={{ width: "1rem", height: "auto" }}
+                  />
+                  <Text ml="1rem" fontWeight="bold" fontSize="1.25rem">
+                    Project metrics
+                  </Text>
+                </Flex>
+                <Flex alignItems="center" pb="1rem">
+                  <Image
+                    width={0}
+                    height={0}
+                    src="/dot-point.svg"
+                    alt="Dot point"
+                    style={{ width: "1rem", height: "auto" }}
+                  />
+                  <Text ml="1rem" fontWeight="bold" fontSize="1.25rem">
+                    Relevant documents
+                  </Text>
+                </Flex>
               </VStack>
             </Box>
           </Box>
@@ -227,15 +254,42 @@ export default function Developers() {
               />
             </Flex>
             <VStack>
-              <Text fontWeight="bold" fontSize="1.25rem" pb="1rem">
-                - Only serious investors will contact you
-              </Text>
-              <Text fontWeight="bold" fontSize="1.25rem" pb="1rem">
-                - Investors will already have knowledge of the project
-              </Text>
-              <Text fontWeight="bold" fontSize="1.25rem" pb="1rem">
-                - Close the deal outside of the platform, however you’d like
-              </Text>
+              <Flex alignItems="center" pb="1rem">
+                <Image
+                  width={0}
+                  height={0}
+                  src="/dot-point.svg"
+                  alt="Dot point"
+                  style={{ width: "1rem", height: "auto" }}
+                />
+                <Text ml="1rem" fontWeight="bold" fontSize="1.25rem">
+                  Only serious investors will contact you
+                </Text>
+              </Flex>
+              <Flex alignItems="center" pb="1rem">
+                <Image
+                  width={0}
+                  height={0}
+                  src="/dot-point.svg"
+                  alt="Dot point"
+                  style={{ width: "1rem", height: "auto" }}
+                />
+                <Text ml="1rem" fontWeight="bold" fontSize="1.25rem">
+                  Investors will already have knowledge of the project
+                </Text>
+              </Flex>
+              <Flex alignItems="center" pb="1rem">
+                <Image
+                  width={0}
+                  height={0}
+                  src="/dot-point.svg"
+                  alt="Dot point"
+                  style={{ width: "1rem", height: "auto" }}
+                />
+                <Text ml="1rem" fontWeight="bold" fontSize="1.25rem">
+                  Close the deal outside of the platform, however you’d like
+                </Text>
+              </Flex>
             </VStack>
           </Box>
         </Flex>

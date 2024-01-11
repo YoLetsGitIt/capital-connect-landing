@@ -8,8 +8,16 @@ export default function Investors() {
   return (
     <Box>
       <Navbar background="#CCE2FF" dark={false} />
-      <Flex minHeight="100vh" alignItems="center" px="10vw" bg="#CCE2FF">
-        <Box flex={1}>
+      <Flex
+        pt={["14vh", 0]}
+        minHeight="100vh"
+        alignItems="center"
+        px="10vw"
+        bg="#CCE2FF"
+        flexDirection={["column", "row"]}
+        justify="center"
+      >
+        <Flex flex={1} flexDirection="column" justify="center" pb={["10vh", 0]}>
           <Text fontWeight="bold" pb="1rem">
             Analyse, contact, invest
           </Text>
@@ -20,21 +28,23 @@ export default function Investors() {
           <Text pb="2rem">
             Contact project owners instantly to close the deal.
           </Text>
-          <Button
-            bg="#002C66"
-            color="#FFFFFF"
-            py="1rem"
-            px="2rem"
-            borderRadius="2rem"
-            fontWeight="bold"
-            fontSize="1rem"
-            borderWidth={0}
-            borderColor="#002C66"
-          >
-            View projects
-          </Button>
-        </Box>
-        <Box flex={1}>
+          <Box>
+            <Button
+              bg="#002C66"
+              color="#FFFFFF"
+              py="1rem"
+              px="2rem"
+              borderRadius="2rem"
+              fontWeight="bold"
+              fontSize="1rem"
+              borderWidth={0}
+              borderColor="#002C66"
+            >
+              View projects
+            </Button>
+          </Box>
+        </Flex>
+        <Box flex={1} display={["none", "flex"]}>
           <Image
             width={0}
             height={0}
