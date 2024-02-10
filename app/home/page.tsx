@@ -16,16 +16,6 @@ export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(TextPlugin);
 
-  useEffect(() => {
-    gsap.to(".landingHeader", {
-      duration: 2,
-      text: {
-        value: "The best online marketplace to find investors and developers",
-        type: "diff",
-      },
-    });
-  }, []);
-
   return (
     <Box>
       <Navbar background="#CCE2FF" dark={false} />

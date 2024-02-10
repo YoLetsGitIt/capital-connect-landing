@@ -29,19 +29,35 @@ export default function Investors() {
             Contact project owners instantly to close the deal.
           </Text>
           <Box>
-            <Button
-              bg="#002C66"
-              color="#FFFFFF"
-              py="1rem"
-              px="2rem"
-              borderRadius="2rem"
-              fontWeight="bold"
-              fontSize="1rem"
-              borderWidth={0}
-              borderColor="#002C66"
-            >
-              View projects
-            </Button>
+            <a href="https://app.capitalconnect.site">
+              <Button
+                bg="#002C66"
+                color="#FFFFFF"
+                py="1rem"
+                px="1.5rem"
+                borderRadius="1rem"
+                fontWeight="bold"
+                fontSize="1rem"
+                borderWidth={0}
+                borderColor="#002C66"
+                mb={["2rem", 0]}
+              >
+                <Flex>
+                  <Text>View projects</Text>
+                  <Image
+                    width={0}
+                    height={0}
+                    src="/pink-arrow.svg"
+                    alt="Pink right arrow"
+                    style={{
+                      marginLeft: "0.5rem",
+                      width: "1rem",
+                      height: "auto",
+                    }}
+                  />
+                </Flex>
+              </Button>
+            </a>
           </Box>
         </Flex>
         <Box flex={1} display={["none", "flex"]}>

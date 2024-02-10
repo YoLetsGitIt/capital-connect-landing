@@ -60,18 +60,23 @@ export default function PricingDeveloper() {
               <Text fontSize="2.5rem" fontWeight="bold" pb="2rem">
                 Free
               </Text>
-              <Button
-                bg="#4D99FF"
-                color="#FFFFFF"
-                py="1rem"
-                px="2rem"
-                borderRadius={16}
-                fontWeight="bold"
-                fontSize="1rem"
-                borderWidth={0}
+              <a
+                href="https://app.capitalconnect.site"
+                style={{ textDecoration: "none" }}
               >
-                Get started
-              </Button>
+                <Button
+                  bg="#4D99FF"
+                  color="#FFFFFF"
+                  py="1rem"
+                  px="2rem"
+                  borderRadius={16}
+                  fontWeight="bold"
+                  fontSize="1rem"
+                  borderWidth={0}
+                >
+                  Get started
+                </Button>
+              </a>
             </Flex>
           </Box>
           <Box borderWidth={10} p="0.5rem" bg="#CCE2FF" borderRadius={32}>
@@ -93,18 +98,23 @@ export default function PricingDeveloper() {
               <Text fontSize="2.5rem" fontWeight="bold" pb="2rem">
                 $300/year
               </Text>
-              <Button
-                bg="#4D99FF"
-                color="#FFFFFF"
-                py="1rem"
-                px="2rem"
-                borderRadius={16}
-                fontWeight="bold"
-                fontSize="1rem"
-                borderWidth={0}
+              <a
+                href="https://app.capitalconnect.site"
+                style={{ textDecoration: "none" }}
               >
-                Get started
-              </Button>
+                <Button
+                  bg="#4D99FF"
+                  color="#FFFFFF"
+                  py="1rem"
+                  px="2rem"
+                  borderRadius={16}
+                  fontWeight="bold"
+                  fontSize="1rem"
+                  borderWidth={0}
+                >
+                  Get started
+                </Button>
+              </a>
             </Flex>
           </Box>
         </Flex>

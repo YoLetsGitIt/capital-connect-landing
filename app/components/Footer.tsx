@@ -79,19 +79,27 @@ const Footer = ({ background }: { background: string }) => {
             );
           })}
       </Box>
-      <Box position="relative" bottom={maxHeight / 1.5} textAlign="center">
-        <Image
-          width={0}
-          height={0}
-          priority={true}
-          src="/logo-dark.svg"
-          alt="Logo"
-          style={{ width: "2rem", height: "auto" }}
-        />
-        <Text color="#fff" fontSize="1.5rem" mb="1rem">
-          Capital Connect
+      <Box
+        position="relative"
+        bottom={[maxHeight / 4.5, maxHeight / 3]}
+        px="5vw"
+      >
+        <Flex alignItems="center" flexDirection="row" pb="0.5rem">
+          <Image
+            width={0}
+            height={0}
+            priority
+            src={"/logo-dark.svg"}
+            alt="Logo"
+            style={{ width: "1.5rem", height: "auto", marginRight: "0.5rem" }}
+          />
+          <Text fontSize="1rem" fontWeight="bold" mr="2rem" color={"#FFFFFF"}>
+            Capital Connect
+          </Text>
+        </Flex>
+        <Text color="#FFFFFF" fontSize="0.75rem">
+          Capital Connect Labs #43433516775
         </Text>
-        <Text color="#fff">©Copyright. All rights reserved.</Text>
       </Box>
     </Box>
   );

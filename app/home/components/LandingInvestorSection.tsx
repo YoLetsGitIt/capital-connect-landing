@@ -49,12 +49,12 @@ export default function LandingInvestorSection() {
   return (
     <Flex
       alignItems="center"
-      height={["auto", "100vh"]}
+      height={["auto", "80vh"]}
       pt={["10vh", 0]}
       px="10vw"
       bg="#FFFFFF"
     >
-      <Box flex={1} display={["none", "block"]}>
+      <Box flex={1.25} display={["none", "block"]}>
         <Image
           width={0}
           height={0}
@@ -66,7 +66,7 @@ export default function LandingInvestorSection() {
         ></Image>
       </Box>
       <Box className="searchContent" flex={1}>
-        <Heading fontWeight="bold" fontSize="3rem" mb="1rem">
+        <Heading fontWeight="bold" fontSize="2rem" mb="1rem">
           Discover a collection of curated projects
         </Heading>
         <Text mb="2rem" color="#666666">

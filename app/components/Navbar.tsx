@@ -190,38 +190,13 @@ const Navbar = ({
           />
         </Flex>
         <Box flex={1} />
-        <Text
-          display={["none", "block"]}
-          mr="2rem"
-          color={
-            pricingHover
-              ? "grey"
-              : atTop
-              ? dark
-                ? "lightgrey"
-                : "grey"
-              : "grey"
-          }
-          fontWeight="bold"
-        >
-          Login
-        </Text>
-        <Box
-          display={["none", "block"]}
-          border={
-            pricingHover
-              ? "2px solid grey"
-              : atTop
-              ? dark
-                ? "2px solid lightgrey"
-                : "2px solid grey"
-              : "2px solid grey"
-          }
-          borderRadius="0.5rem"
-          py="0.5rem"
-          px="1rem"
+        <a
+          href="https://app.capitalconnect.site"
+          style={{ textDecoration: "none" }}
         >
           <Text
+            display={["none", "block"]}
+            mr="2rem"
             color={
               pricingHover
                 ? "grey"
@@ -233,9 +208,44 @@ const Navbar = ({
             }
             fontWeight="bold"
           >
-            Join now
+            Login
           </Text>
-        </Box>
+        </a>
+        <a
+          href="https://app.capitalconnect.site/signup"
+          style={{ textDecoration: "none" }}
+        >
+          <Box
+            display={["none", "block"]}
+            border={
+              pricingHover
+                ? "2px solid grey"
+                : atTop
+                ? dark
+                  ? "2px solid lightgrey"
+                  : "2px solid grey"
+                : "2px solid grey"
+            }
+            borderRadius="0.5rem"
+            py="0.5rem"
+            px="1rem"
+          >
+            <Text
+              color={
+                pricingHover
+                  ? "grey"
+                  : atTop
+                  ? dark
+                    ? "lightgrey"
+                    : "grey"
+                  : "grey"
+              }
+              fontWeight="bold"
+            >
+              Join now
+            </Text>
+          </Box>
+        </a>
         <Box
           onClick={() => {
             setMobilePricingExpanded(false);

@@ -50,13 +50,14 @@ export default function LandingDeveloperSection() {
     <Flex
       className="thirdSection"
       alignItems="center"
-      height={["auto", "100vh"]}
+      height={["auto", "80vh"]}
       px="10vw"
       py={["10vh", 0]}
+      pb="10vh"
       bg="#FFFFFF"
     >
-      <Box className="presentationContent" flex={1} mr="6vw">
-        <Heading fontWeight="bold" fontSize="3rem" mb="1rem">
+      <Box className="presentationContent" flex={1.25} mr="2rem">
+        <Heading fontWeight="bold" fontSize="2rem" mb="1rem">
           Expose your project to many active investors
         </Heading>
         <Text mb="2rem" color="#666666">
@@ -88,7 +89,7 @@ export default function LandingDeveloperSection() {
           priority
           src="/pitching.svg"
           alt="Landing image"
-          style={{ width: "40vw", height: "auto" }}
+          style={{ width: "100%", height: "auto" }}
         ></Image>
       </Box>
     </Flex>

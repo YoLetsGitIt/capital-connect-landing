@@ -391,19 +391,24 @@ export default function Pricing() {
           <Text flex={1} color="#FFFFFF" fontWeight="bold" fontSize="1.5rem">
             Ready to get started?
           </Text>
-          <Button
-            bg="#002C66"
-            color="#FFFFFF"
-            py="1rem"
-            px="2rem"
-            borderRadius="1rem"
-            fontWeight="bold"
-            fontSize="1rem"
-            borderWidth={0}
-            borderColor="#002C66"
+          <a
+            href="https://app.capitalconnect.site"
+            style={{ textDecoration: "none" }}
           >
-            Join now
-          </Button>
+            <Button
+              bg="#002C66"
+              color="#FFFFFF"
+              py="1rem"
+              px="2rem"
+              borderRadius="1rem"
+              fontWeight="bold"
+              fontSize="1rem"
+              borderWidth={0}
+              borderColor="#002C66"
+            >
+              Join now
+            </Button>
+          </a>
         </Flex>
       </Flex>
       <Footer background="#002C66" />
