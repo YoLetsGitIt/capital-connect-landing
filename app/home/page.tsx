@@ -107,7 +107,6 @@ export default function Home() {
             <Image
               width={0}
               height={0}
-              priority
               src="/developers-infographic.svg"
               alt="Developer uploading infographic"
               style={{
@@ -132,7 +131,6 @@ export default function Home() {
             <Image
               width={0}
               height={0}
-              priority
               src="/cc-infographic.svg"
               alt="Developer uploading infographic"
               style={{
@@ -157,7 +155,6 @@ export default function Home() {
             <Image
               width={0}
               height={0}
-              priority
               src="/investors-infographic.svg"
               alt="Developer uploading infographic"
               style={{
