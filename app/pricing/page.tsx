@@ -11,7 +11,7 @@ export default function Pricing() {
       <Navbar background="#002C66" dark={true} />
       <Flex bg="#002C66" minHeight="100vh" flexDirection="column" px="10vw">
         <Text
-          pt="15vh"
+          pt="20vh"
           color="#FFFFFF"
           textAlign="center"
           fontWeight="bold"

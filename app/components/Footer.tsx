@@ -6,34 +6,25 @@ import { gsap } from "gsap";
 import { useEffect } from "react";
 
 const Footer = ({ background }: { background: string }) => {
-  const maxHeight = 400;
-  const minHeight = 350;
-
   const numberOfBuildings = 20;
 
-  useEffect(() => {
-    gsap.to(`.building`, {
-      height: `random(${minHeight + 10}, ${maxHeight}, 1)`,
-      repeat: -1,
-      duration: 1,
-      stagger: {
-        each: 1,
-        from: "random",
-        grid: "auto",
-      },
-      yoyo: true,
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.to(`.building`, {
+  //     height: `random(${minHeight + 10}, ${maxHeight}, 1)`,
+  //     repeat: -1,
+  //     duration: 1,
+  //     stagger: {
+  //       each: 1,
+  //       from: "random",
+  //       grid: "auto",
+  //     },
+  //     yoyo: true,
+  //   });
+  // }, []);
 
   return (
-    <Box
-      bg={background}
-      className="footer"
-      flex={1}
-      height={maxHeight}
-      alignItems="center"
-    >
-      <Box display="flex" flexDirection="row" flex={1} alignItems="flex-end">
+    <Box className="footer" flex={1} alignItems="center" pb="3rem">
+      {/* <Box display="flex" flexDirection="row" flex={1} alignItems="flex-end">
         {Array(numberOfBuildings)
           .fill(0)
           .map((x, i) => {
@@ -78,28 +69,22 @@ const Footer = ({ background }: { background: string }) => {
               </Box>
             );
           })}
-      </Box>
-      <Box
-        position="relative"
-        bottom={[maxHeight / 4.5, maxHeight / 3]}
-        px="5vw"
-      >
+      </Box> */}
+      <Box px="5vw">
         <Flex alignItems="center" flexDirection="row" pb="0.5rem">
           <Image
             width={0}
             height={0}
             priority
-            src={"/logo-dark.svg"}
+            src={"/logo.svg"}
             alt="Logo"
             style={{ width: "1.5rem", height: "auto", marginRight: "0.5rem" }}
           />
-          <Text fontSize="1rem" fontWeight="bold" mr="2rem" color={"#FFFFFF"}>
+          <Text fontSize="1rem" fontWeight="bold" mr="2rem">
             Capital Connect
           </Text>
         </Flex>
-        <Text color="#FFFFFF" fontSize="0.75rem">
-          Capital Connect Labs #43433516775
-        </Text>
+        <Text fontSize="0.75rem">Capital Connect Labs #43433516775</Text>
       </Box>
     </Box>
   );

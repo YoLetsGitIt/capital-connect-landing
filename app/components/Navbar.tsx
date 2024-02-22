@@ -60,15 +60,15 @@ const Navbar = ({
       <Flex
         flexDirection="row"
         top={show ? 0 : "-13vh"}
-        bg={pricingHover ? "#FFFFFF" : atTop ? background : "#FFFFFF"}
-        pt={[0, atTop ? "1rem" : 0]}
+        bg={"#FFFFFF"}
+        pt={[0]}
         height="12vh"
         width="100vw"
         px="5vw"
         transitionTimingFunction="ease-in"
         transition="0.3s"
         alignItems="center"
-        boxShadow={atTop ? "0" : "0px 2px 2px #00000040"}
+        boxShadow={"0px 2px 2px #00000040"}
       >
         <Link href="/" style={{ textDecoration: "none", color: "#000000" }}>
           <Flex alignItems="center" flexDirection="row">
@@ -76,15 +76,7 @@ const Navbar = ({
               width={0}
               height={0}
               priority
-              src={
-                pricingHover
-                  ? "logo.svg"
-                  : atTop
-                  ? dark
-                    ? "/logo-dark.svg"
-                    : "/logo.svg"
-                  : "/logo.svg"
-              }
+              src={"/logo.svg"}
               alt="Logo"
               style={{ width: "1.5rem", height: "auto", marginRight: "0.5rem" }}
             />
@@ -92,58 +84,26 @@ const Navbar = ({
               fontSize="1.25rem"
               fontWeight="bold"
               mr="2rem"
-              color={
-                pricingHover
-                  ? "#000000"
-                  : atTop
-                  ? dark
-                    ? "#FFFFFF"
-                    : "#000000"
-                  : "#000000"
-              }
+              color={pricingHover ? "#000000" : "#000000"}
             >
               Capital Connect
             </Text>
           </Flex>
         </Link>
-        <Box display={["none", "block"]}>
+        {/* <Box display={["none", "block"]}>
           <Link href="/developers" style={{ textDecoration: "none" }}>
-            <Text
-              pl="2rem"
-              fontWeight="bold"
-              color={
-                pricingHover
-                  ? "grey"
-                  : atTop
-                  ? dark
-                    ? "lightgrey"
-                    : "grey"
-                  : "grey"
-              }
-            >
+            <Text pl="2rem" fontWeight="bold" color={"grey"}>
               Developers
             </Text>
           </Link>
         </Box>
         <Box display={["none", "block"]}>
           <Link href="/investors" style={{ textDecoration: "none" }}>
-            <Text
-              pl="2rem"
-              fontWeight="bold"
-              color={
-                pricingHover
-                  ? "grey"
-                  : atTop
-                  ? dark
-                    ? "lightgrey"
-                    : "grey"
-                  : "grey"
-              }
-            >
+            <Text pl="2rem" fontWeight="bold" color={"grey"}>
               Investors
             </Text>
           </Link>
-        </Box>
+        </Box> */}
         <Flex
           display={["none", "flex"]}
           onMouseOver={handleMouseOver}
@@ -151,35 +111,14 @@ const Navbar = ({
           height="100%"
           alignItems="center"
         >
-          <Text
-            pl="2rem"
-            pr="0.5rem"
-            fontWeight="bold"
-            color={
-              pricingHover
-                ? "grey"
-                : atTop
-                ? dark
-                  ? "lightgrey"
-                  : "grey"
-                : "grey"
-            }
-          >
+          <Text pl="2rem" pr="0.5rem" fontWeight="bold" color={"grey"}>
             Pricing
           </Text>
           <Image
             width={0}
             height={0}
             priority
-            src={
-              pricingHover
-                ? "arrow-down.svg"
-                : atTop
-                ? dark
-                  ? "/arrow-down-light.svg"
-                  : "/arrow-down.svg"
-                : "/arrow-down.svg"
-            }
+            src={"/arrow-down.svg"}
             alt="Logo"
             style={{
               width: "0.5rem",
@@ -197,15 +136,7 @@ const Navbar = ({
           <Text
             display={["none", "block"]}
             mr="2rem"
-            color={
-              pricingHover
-                ? "grey"
-                : atTop
-                ? dark
-                  ? "lightgrey"
-                  : "grey"
-                : "grey"
-            }
+            color={"grey"}
             fontWeight="bold"
           >
             Login
@@ -217,31 +148,12 @@ const Navbar = ({
         >
           <Box
             display={["none", "block"]}
-            border={
-              pricingHover
-                ? "2px solid grey"
-                : atTop
-                ? dark
-                  ? "2px solid lightgrey"
-                  : "2px solid grey"
-                : "2px solid grey"
-            }
+            border={"2px solid grey"}
             borderRadius="0.5rem"
             py="0.5rem"
             px="1rem"
           >
-            <Text
-              color={
-                pricingHover
-                  ? "grey"
-                  : atTop
-                  ? dark
-                    ? "lightgrey"
-                    : "grey"
-                  : "grey"
-              }
-              fontWeight="bold"
-            >
+            <Text color={"grey"} fontWeight="bold">
               Join now
             </Text>
           </Box>
@@ -290,7 +202,7 @@ const Navbar = ({
             borderStyle: "dashed",
             borderWidth: 1,
             borderRadius: 1,
-            borderColor: "lightgrey",
+            borderColor: "grey",
           }}
         />
         <Box px="5vw" pt="1.5rem">
