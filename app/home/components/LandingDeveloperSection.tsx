@@ -5,6 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function LandingDeveloperSection() {
   gsap.registerPlugin(ScrollTrigger);
@@ -88,29 +89,31 @@ export default function LandingDeveloperSection() {
             Broaden your funding options
           </Text>
         </HStack>
-        <Button
-          bg="#002C66"
-          color="#FFFFFF"
-          mt="1rem"
-          py="1rem"
-          px="1.5rem"
-          borderRadius="1rem"
-          fontWeight="bold"
-          fontSize="1rem"
-          borderWidth={2}
-          borderColor="#CCE2FF"
-        >
-          <Flex alignItems="center">
-            <Text>Upload your project</Text>
-            <Image
-              width={0}
-              height={0}
-              src="/pink-arrow.svg"
-              alt="Pink right arrow"
-              style={{ marginLeft: "0.5rem", width: "1rem", height: "1rem" }}
-            />
-          </Flex>
-        </Button>
+        <Link href="https://app.capitalconnect.site">
+          <Button
+            bg="#002C66"
+            color="#FFFFFF"
+            mt="1rem"
+            py="1rem"
+            px="1.5rem"
+            borderRadius="1rem"
+            fontWeight="bold"
+            fontSize="1rem"
+            borderWidth={2}
+            borderColor="#CCE2FF"
+          >
+            <Flex alignItems="center">
+              <Text>Upload your project</Text>
+              <Image
+                width={0}
+                height={0}
+                src="/pink-arrow.svg"
+                alt="Pink right arrow"
+                style={{ marginLeft: "0.5rem", width: "1rem", height: "1rem" }}
+              />
+            </Flex>
+          </Button>
+        </Link>
       </Box>
       <Box flex={1} display={["none", "block"]}>
         <Image

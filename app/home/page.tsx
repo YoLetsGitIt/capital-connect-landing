@@ -10,7 +10,7 @@ import LandingCallToAction from "./components/LandingCallToAction";
 import LandingDeveloperSection from "./components/LandingDeveloperSection";
 import LandingInvestorSection from "./components/LandingInvestorSection";
 import Navbar from "../components/Navbar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -117,7 +117,7 @@ export default function Home() {
             <Text fontWeight="bold" fontSize="1.5rem" pt="1rem" pb="0.5rem">
               Developers
             </Text>
-            <Text color="#808080">
+            <Text color="#808080" textAlign="center">
               Upload your development through our project form
             </Text>
           </Flex>

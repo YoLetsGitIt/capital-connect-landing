@@ -176,9 +176,7 @@ const Navbar = ({
             width={0}
             height={0}
             priority
-            src={
-              expanded ? "/cross.svg" : dark ? "/menu-dark.svg" : "/menu.svg"
-            }
+            src={expanded ? "/cross.svg" : "/menu.svg"}
             alt="Logo"
             style={{
               width: expanded ? "1rem" : "1.5rem",
@@ -206,7 +204,7 @@ const Navbar = ({
           }}
         />
         <Box px="5vw" pt="1.5rem">
-          <Link
+          {/* <Link
             href="/developers"
             style={{ textDecoration: "none", color: "#000000" }}
           >
@@ -234,7 +232,7 @@ const Navbar = ({
             >
               Investors
             </Text>
-          </Link>
+          </Link> */}
           <Box onClick={() => setMobilePricingExpanded(!mobilePricingExpanded)}>
             <Flex justify="space-between" alignItems="center" pb="1.5rem">
               <Text

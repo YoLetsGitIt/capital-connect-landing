@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Flex, Box, Heading, Text, Button } from "@kuma-ui/core";
 import Image from "next/image";
 import styles from "../../page.module.css";
@@ -16,6 +16,8 @@ export default function Landing() {
       },
     });
   }, []);
+
+  const [buttonHover, setButtonHover] = useState(false);
 
   return (
     <Flex
@@ -55,6 +57,8 @@ export default function Landing() {
             borderWidth={2}
             borderColor="#CCE2FF"
             mb={["2rem", 0]}
+            onMouseOver={() => setButtonHover(true)}
+            onMouseOut={() => setButtonHover(false)}
           >
             <Flex alignItems="center">
               <Text>View projects</Text>
@@ -63,7 +67,12 @@ export default function Landing() {
                 height={0}
                 src="/pink-arrow.svg"
                 alt="Pink right arrow"
-                style={{ marginLeft: "0.5rem", width: "1rem", height: "1rem" }}
+                style={{
+                  marginLeft: "0.5rem",
+                  width: "1rem",
+                  height: "1rem",
+                  transition: "all 0.5s",
+                }}
               />
             </Flex>
           </Button>
