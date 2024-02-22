@@ -23,7 +23,7 @@ const Footer = ({ background }: { background: string }) => {
   // }, []);
 
   return (
-    <Box className="footer" flex={1} alignItems="center" pb="3rem">
+    <Box className="footer" flex={1} alignItems="center" py="3rem">
       {/* <Box display="flex" flexDirection="row" flex={1} alignItems="flex-end">
         {Array(numberOfBuildings)
           .fill(0)

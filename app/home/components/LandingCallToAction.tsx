@@ -33,7 +33,7 @@ export default function LandingCallToAction() {
     <Flex
       mt="5vh"
       px="10vw"
-      mb="15vh"
+      mb="5vh"
       bg="#E5F0FF"
       flexDirection="column"
       alignItems="center"
