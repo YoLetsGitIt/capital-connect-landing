@@ -96,7 +96,7 @@ export default function PricingDeveloper() {
               </Text>
               <Text pb="2rem">Unlimited project uploads</Text>
               <Text fontSize="2.5rem" fontWeight="bold" pb="2rem">
-                $300/year
+                $299/year
               </Text>
               <a
                 href="https://app.capitalconnect.site"
