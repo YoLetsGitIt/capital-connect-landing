@@ -50,7 +50,7 @@ export default function Pricing() {
           <Box flex={1}>
             <Flex flex={1} alignItems="flex-end" justify="center">
               <Text color="#FFFFFF" fontWeight="bold" fontSize="1.75rem">
-                $349
+                $399
               </Text>
               <Text color="#FFFFFF" fontWeight="bold" fontSize="1rem">
                 /year
