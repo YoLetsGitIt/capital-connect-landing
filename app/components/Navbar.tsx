@@ -143,7 +143,7 @@ const Navbar = ({
           </Text>
         </a>
         <a
-          href="https://app.capitalconnect.site/signup"
+          href="https://app.capitalconnect.site"
           style={{ textDecoration: "none" }}
         >
           <Box

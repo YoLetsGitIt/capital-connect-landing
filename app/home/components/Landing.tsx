@@ -26,10 +26,6 @@ export default function Landing() {
       px="10.5vw"
       pt={["20vh", 0]}
       pb={["5vh", 0]}
-      // backgroundImage={`url('/landing.png')`}
-      // backgroundPosition="center"
-      // backgroundSize="cover"
-      // backgroundRepeat="no-repeat"
     >
       <Image
         src="/landing.png"
