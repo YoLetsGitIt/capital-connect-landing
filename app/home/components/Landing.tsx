@@ -40,7 +40,7 @@ export default function Landing() {
         objectFit="cover"
         objectPosition="center"
       />
-      <Box flex={1} zIndex={100}>
+      <Box flex={1} zIndex={25}>
         <Text
           fontWeight="bold"
           fontSize="3rem"
