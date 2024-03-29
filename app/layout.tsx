@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { KumaRegistry } from "@kuma-ui/next-plugin/registry";
-import Navbar from "./components/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const dmsans = DM_Sans({
   subsets: ["latin"],
@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmsans.variable}`}>
       <body>
+        <SpeedInsights />
         <KumaRegistry>{children}</KumaRegistry>
       </body>
     </html>
