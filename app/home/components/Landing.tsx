@@ -26,12 +26,21 @@ export default function Landing() {
       px="10.5vw"
       pt={["20vh", 0]}
       pb={["5vh", 0]}
-      backgroundImage={`url('/landing.png')`}
-      backgroundPosition="center"
-      backgroundSize="cover"
-      backgroundRepeat="no-repeat"
+      // backgroundImage={`url('/landing.png')`}
+      // backgroundPosition="center"
+      // backgroundSize="cover"
+      // backgroundRepeat="no-repeat"
     >
-      <Box flex={1}>
+      <Image
+        src="/landing.png"
+        width={0}
+        height={0}
+        alt="background of the city"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+      />
+      <Box flex={1} zIndex={100}>
         <Text
           fontWeight="bold"
           fontSize="3rem"
