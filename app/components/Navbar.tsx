@@ -61,7 +61,6 @@ const Navbar = ({
         flexDirection="row"
         top={show ? 0 : "-13vh"}
         bg={"#FFFFFF"}
-        pt={[0]}
         height="12vh"
         width="100vw"
         px="5vw"

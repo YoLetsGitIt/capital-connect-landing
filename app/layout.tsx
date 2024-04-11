@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { KumaRegistry } from "@kuma-ui/next-plugin/registry";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "./components/Footer";
 
 const dmsans = DM_Sans({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body>
         <SpeedInsights />
         <KumaRegistry>{children}</KumaRegistry>
+        <Footer />
       </body>
     </html>
   );

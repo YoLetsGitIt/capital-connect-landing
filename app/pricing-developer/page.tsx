@@ -21,6 +21,7 @@ export default function PricingDeveloper() {
         minHeight="100vh"
         flexDirection="column"
         justify="center"
+        width="100vw"
       >
         <Text color="#FFFFFF" textAlign="center" fontSize="1.25rem" pb="0.5rem">
           A generous free plan to get you started
@@ -119,7 +120,6 @@ export default function PricingDeveloper() {
           </Box>
         </Flex>
       </Flex>
-      <Footer background="#002C66" />
     </Box>
   );
 }

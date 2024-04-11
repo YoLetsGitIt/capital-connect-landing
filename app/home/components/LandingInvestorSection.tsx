@@ -67,7 +67,7 @@ export default function LandingInvestorSection() {
         />
       </Box>
       <Box className="searchContent" flex={1}>
-        <Heading fontWeight="bold" fontSize="2.5rem" mb="1rem">
+        <Heading fontWeight="bold" fontSize={["1.5rem", "2.5rem"]} mb="1rem">
           Discover a collection of curated projects
         </Heading>
         <Text mb="2rem" fontSize="1.25rem" color="#666666">

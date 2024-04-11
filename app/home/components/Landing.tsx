@@ -26,6 +26,7 @@ export default function Landing() {
       px="10.5vw"
       pt={["20vh", 0]}
       pb={["5vh", 0]}
+      width="100vw"
     >
       <Image
         src="/landing.png"
@@ -39,7 +40,7 @@ export default function Landing() {
       <Box flex={1} zIndex={25}>
         <Text
           fontWeight="bold"
-          fontSize="3rem"
+          fontSize={["2rem", "3rem"]}
           mb="1rem"
           color="#FFFFFF"
           className={[styles.header, "landingHeader"].join(" ")}

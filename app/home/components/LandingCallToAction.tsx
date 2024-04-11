@@ -39,14 +39,15 @@ export default function LandingCallToAction() {
       alignItems="center"
       py="15vh"
     >
-      <Heading
+      <Text
         textAlign="center"
         pb="2.5rem"
+        fontWeight="bold"
         className={[styles.header].join(" ")}
-        fontSize={["2rem", "2rem"]}
+        fontSize={["2rem", "3rem"]}
       >
         Connect with the right people now on Capital Connect
-      </Heading>
+      </Text>
       <Link href="https://app.capitalconnect.site">
         <Button
           bg="#002C66"

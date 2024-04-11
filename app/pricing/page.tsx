@@ -411,7 +411,6 @@ export default function Pricing() {
           </a>
         </Flex>
       </Flex>
-      <Footer background="#002C66" />
     </Box>
   );
 }

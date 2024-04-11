@@ -58,7 +58,7 @@ export default function LandingDeveloperSection() {
       bg="#FFFFFF"
     >
       <Box className="presentationContent" flex={1.25} mr="2rem">
-        <Heading fontWeight="bold" fontSize="2.5rem" mb="1rem">
+        <Heading fontWeight="bold" fontSize={["1.5rem", "2.5rem"]} mb="1rem">
           Expose your project to many active investors
         </Heading>
         <Text fontSize="1.25rem" mb="2rem" color="#666666">

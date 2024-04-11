@@ -74,7 +74,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Box>
+    <Box width="100vw">
       <Navbar background="#CCE2FF" dark={false} />
       <Landing />
       <Flex
@@ -87,7 +87,7 @@ export default function Home() {
         <Text
           textAlign="center"
           fontWeight="bold"
-          fontSize="3rem"
+          fontSize={["2rem", "3rem"]}
           pb="3rem"
           px="12.5vw"
         >
@@ -175,7 +175,6 @@ export default function Home() {
       <LandingInvestorSection />
       <LandingDeveloperSection />
       <LandingCallToAction />
-      <Footer background="#FFFFFF" />
     </Box>
   );
 }
