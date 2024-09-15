@@ -11,6 +11,7 @@ import LandingDeveloperSection from "./components/LandingDeveloperSection";
 import LandingInvestorSection from "./components/LandingInvestorSection";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
+import Explanation from "./components/Explanation";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -77,6 +78,7 @@ export default function Home() {
     <Box width="100vw">
       <Navbar background="#CCE2FF" dark={false} />
       <Landing />
+      <Explanation />
       <Flex
         flexDirection="column"
         alignItems="center"
