@@ -4,47 +4,122 @@ import { Flex, Box, Heading, Text, HStack, Button } from "@kuma-ui/core";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { useEffect } from "react";
 import Link from "next/link";
 
 export default function LandingInvestorSection() {
   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(MotionPathPlugin);
 
   useEffect(() => {
     gsap.fromTo(
-      ".searchImage",
+      ".imageContainer",
+      {
+        y: 25,
+        opacity: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: ".imageContainer",
+          toggleActions: "restart none none none",
+        },
+        y: 0,
+        opacity: 1,
+        ease: "power2.out",
+        duration: 0.5,
+      }
+    );
+    gsap.fromTo(
+      ".thumbnail1",
       {
         x: -50,
         opacity: 0,
       },
       {
-        scrollTrigger: {
-          trigger: ".searchImage",
-          toggleActions: "restart none none none",
-        },
-        delay: 0.5,
+        delay: 0.3,
         x: 0,
         opacity: 1,
-        ease: "power2.out",
-        duration: 1,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: ".thumbnail1",
+          toggleActions: "restart none none none",
+        },
       }
     );
     gsap.fromTo(
-      ".searchContent",
+      ".thumbnail2",
       {
-        y: 50,
+        x: 50,
         opacity: 0,
       },
       {
-        y: 0,
+        delay: 0.5,
+        x: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: {
-          trigger: ".searchImage",
+          trigger: ".thumbnail1",
           toggleActions: "restart none none none",
         },
       }
     );
+    gsap.fromTo(
+      ".thumbnail3",
+      {
+        x: -50,
+        opacity: 0,
+      },
+      {
+        delay: 0.7,
+        x: 0,
+        opacity: 1,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: ".thumbnail1",
+          toggleActions: "restart none none none",
+        },
+      }
+    );
+    gsap.fromTo(
+      "#search",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 0.5,
+        delay: 0,
+        scrollTrigger: {
+          trigger: ".imageContainer",
+          toggleActions: "restart none none none",
+        },
+      }
+    );
+    // gsap.fromTo(
+    //   "#search",
+    //   { opacity: 1 },
+    //   { opacity: 0, duration: 0.5, delay: 9.5, repeat: -1 }
+    // );
+    gsap.to("#search", {
+      motionPath: {
+        path: [
+          { x: 0, y: 0 },
+          { x: 100, y: -20 },
+          { x: 300, y: 60 },
+          { x: 200, y: 150 },
+          { x: 400, y: 200 },
+          { x: 250, y: 350 },
+          { x: 100, y: 275 },
+          { x: 200, y: 200 },
+          { x: 10, y: 80 },
+          { x: 0, y: 0 },
+        ],
+      },
+      transformOrigin: "50% 50%",
+      duration: 10,
+      curviness: 2,
+      repeat: -1,
+      ease: "none",
+    });
   }, []);
 
   return (
@@ -52,20 +127,8 @@ export default function LandingInvestorSection() {
       alignItems="center"
       height={["auto", "80vh"]}
       pt={["10vh", 0]}
-      px="10vw"
       bg="#FFFFFF"
     >
-      <Box flex={1.25} display={["none", "block"]}>
-        <Image
-          width={0}
-          height={0}
-          className="searchImage"
-          priority
-          src="/search.svg"
-          alt="Searching on mobile phone"
-          style={{ width: "75%", height: "auto" }}
-        />
-      </Box>
       <Box className="searchContent" flex={1}>
         <Heading fontWeight="bold" fontSize={["1.5rem", "2.5rem"]} mb="1rem">
           Discover a collection of curated projects
@@ -124,6 +187,64 @@ export default function LandingInvestorSection() {
           </Button>
         </Link>
       </Box>
+      <Flex
+        flex={1}
+        display={["none", "block"]}
+        bg="#002C66"
+        borderRadius="1rem"
+        p="3rem"
+        gap="1rem"
+        ml="2rem"
+        opacity={0}
+        className="imageContainer"
+      >
+        <Image
+          width={0}
+          height={0}
+          src="/search-white.svg"
+          style={{
+            opacity: 0,
+            width: "4rem",
+            height: "auto",
+            position: "absolute",
+            zIndex: 100,
+          }}
+          id="search"
+        />
+        <Flex flex={1} mb="1rem" className="thumbnail1">
+          <Image
+            width={0}
+            height={0}
+            className="thumbnail1"
+            priority
+            src="/commercial-building-thumbnail.svg"
+            alt="Searching on mobile phone"
+            style={{ width: "70%", height: "auto" }}
+          />
+        </Flex>
+        <Flex flex={1} justifyContent="flex-end" mb="1rem">
+          <Image
+            width={0}
+            height={0}
+            className="thumbnail2"
+            priority
+            src="/townhouse-thumbnail.svg"
+            alt="Searching on mobile phone"
+            style={{ width: "70%", height: "auto" }}
+          />
+        </Flex>
+        <Flex flex={1} justifyContent="center">
+          <Image
+            width={0}
+            height={0}
+            className="thumbnail3"
+            priority
+            src="/officespace-thumbnail.svg"
+            alt="Searching on mobile phone"
+            style={{ width: "70%", height: "auto" }}
+          />
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

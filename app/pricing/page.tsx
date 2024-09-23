@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Flex, Text, HStack, Image, Button } from "@kuma-ui/core";
-import Navbar from "../components/Navbar";
+import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import PricingOptions from "./components/PricingOptions";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Flex, Text, Button, Image } from "@kuma-ui/core";
-import Navbar from "../components/Navbar";
+import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Investors() {

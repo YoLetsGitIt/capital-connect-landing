@@ -6,8 +6,7 @@ import {
   Text,
   Button,
 } from "@/node_modules/@kuma-ui/core/dist/index";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Navbar } from "../components/Navbar";
 
 export default function PricingDeveloper() {
   return (

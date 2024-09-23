@@ -5,7 +5,7 @@ import Link from "@/node_modules/next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Navbar = ({
+export const Navbar = ({
   background,
   dark,
 }: {
@@ -22,6 +22,7 @@ const Navbar = ({
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
       // if scroll down hide the navbar
+      console.log("hello", window.scrollY);
       setShow(false);
     } else {
       // if scroll up show the navbar
@@ -55,19 +56,20 @@ const Navbar = ({
     setPricingHover(false);
   };
 
+  const navbarDark = !atTop || pricingHover;
+
   return (
     <Box zIndex={50} position="fixed">
       <Flex
         flexDirection="row"
-        top={show ? 0 : "-13vh"}
-        bg={"#FFFFFF"}
-        height="12vh"
+        bg={navbarDark ? "#FFFFFF" : "#FFFFFF00"}
+        height={navbarDark ? "10vh" : "12vh"}
         width="100vw"
-        px="5vw"
+        px="10vw"
         transitionTimingFunction="ease-in"
         transition="0.3s"
         alignItems="center"
-        boxShadow={"0px 2px 2px #00000040"}
+        boxShadow={navbarDark ? "0px 2px 2px #00000040" : "0px"}
       >
         <Link href="/" style={{ textDecoration: "none", color: "#000000" }}>
           <Flex alignItems="center" flexDirection="row">
@@ -75,7 +77,7 @@ const Navbar = ({
               width={0}
               height={0}
               priority
-              src={"/logo.svg"}
+              src={navbarDark ? "logo.svg" : "/logo-dark.svg"}
               alt="Logo"
               style={{ width: "1.5rem", height: "auto", marginRight: "0.5rem" }}
             />
@@ -83,26 +85,12 @@ const Navbar = ({
               fontSize="1.25rem"
               fontWeight="bold"
               mr="2rem"
-              color={pricingHover ? "#000000" : "#000000"}
+              color={navbarDark ? "#000000" : "#FFFFFF"}
             >
               Capital Connect
             </Text>
           </Flex>
         </Link>
-        {/* <Box display={["none", "block"]}>
-          <Link href="/developers" style={{ textDecoration: "none" }}>
-            <Text pl="2rem" fontWeight="bold" color={"grey"}>
-              Developers
-            </Text>
-          </Link>
-        </Box>
-        <Box display={["none", "block"]}>
-          <Link href="/investors" style={{ textDecoration: "none" }}>
-            <Text pl="2rem" fontWeight="bold" color={"grey"}>
-              Investors
-            </Text>
-          </Link>
-        </Box> */}
         <Flex
           display={["none", "flex"]}
           onMouseOver={handleMouseOver}
@@ -110,14 +98,19 @@ const Navbar = ({
           height="100%"
           alignItems="center"
         >
-          <Text pl="2rem" pr="0.5rem" fontWeight="bold" color={"grey"}>
+          <Text
+            pl="2rem"
+            pr="0.5rem"
+            fontWeight="bold"
+            color={navbarDark ? "grey" : "#FFFFFF"}
+          >
             Pricing
           </Text>
           <Image
             width={0}
             height={0}
             priority
-            src={"/arrow-down.svg"}
+            src={navbarDark ? "arrow-down.svg" : "/arrow-down-light.svg"}
             alt="Logo"
             style={{
               width: "0.5rem",
@@ -135,7 +128,7 @@ const Navbar = ({
           <Text
             display={["none", "block"]}
             mr="2rem"
-            color={"grey"}
+            color={navbarDark ? "grey" : "#FFFFFF"}
             fontWeight="bold"
           >
             Login
@@ -147,12 +140,11 @@ const Navbar = ({
         >
           <Box
             display={["none", "block"]}
-            border={"2px solid grey"}
             borderRadius="0.5rem"
             py="0.5rem"
             px="1rem"
           >
-            <Text color={"grey"} fontWeight="bold">
+            <Text color={navbarDark ? "grey" : "#FFFFFF"} fontWeight="bold">
               Join now
             </Text>
           </Box>
@@ -356,7 +348,7 @@ const Navbar = ({
       </Box>
       <Box
         pt={atTop ? "1rem" : 0}
-        px="5vw"
+        px="10vw"
         boxShadow="0px 2px 2px #00000040"
         bg="#FFFFFF"
         onMouseOver={handleMouseOver}
@@ -376,7 +368,7 @@ const Navbar = ({
             borderColor: "lightgrey",
           }}
         />
-        <Flex gap="2rem" py="2rem">
+        <Flex gap="2rem" py="3rem">
           <Box flex={1}>
             <Link
               href="/pricing-developer"
@@ -432,5 +424,3 @@ const Navbar = ({
     </Box>
   );
 };
-
-export default Navbar;

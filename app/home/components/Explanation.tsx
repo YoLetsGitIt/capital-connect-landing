@@ -1,4 +1,4 @@
-import { Flex, Text } from "@/node_modules/@kuma-ui/core/dist/index";
+import { Box, Flex, Text } from "@/node_modules/@kuma-ui/core/dist/index";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import Image from "@/node_modules/next/image";
@@ -63,34 +63,31 @@ export default function Explanation() {
 
   return (
     <Flex
-      flexDirection="column"
+      flex={1}
       alignItems="center"
       justifyContent="center"
-      minHeight="80vh"
-      px="10vw"
-      width="100vw"
+      flexDir="column"
+      minHeight="90vh"
+      textAlign="center"
     >
-      <Text fontSize="1.25rem" fontWeight="500" pb="1rem">
+      <Text fontSize="1.25rem" fontWeight="500" pb="1rem" pt="6rem">
         Connect with the right project now
       </Text>
-      <Text fontSize="2.5rem" fontWeight="bold" pb="6rem">
+      <Text fontSize="2.5rem" fontWeight="bold" pb="5rem">
         Quick &amp; easy investing
       </Text>
-      <Flex width="100%">
-        <Flex
-          flex={1}
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          className="browseProjects"
-        >
+      <Flex flex={1} flexDir="row">
+        <Flex alignItems="center" className="browseProjects" flexDir="column">
           <Image
             width={0}
             height={0}
             priority
             src="/browseProjects.svg"
             alt="Search"
-            style={{ width: "8rem", height: "auto" }}
+            style={{
+              width: "auto",
+              height: "9rem",
+            }}
           />
           <Text
             textAlign="center"
@@ -106,20 +103,14 @@ export default function Explanation() {
             ipsum Loren ipsum
           </Text>
         </Flex>
-        <Flex
-          flex={1}
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          className="contactDeveloper"
-        >
+        <Flex alignItems="center" className="contactDeveloper" flexDir="column">
           <Image
             width={0}
             height={0}
             priority
             src="/contactDeveloper.svg"
             alt="Contact developer"
-            style={{ width: "8rem", height: "auto" }}
+            style={{ width: "auto", height: "9rem" }}
           />
           <Text
             textAlign="center"
@@ -135,19 +126,13 @@ export default function Explanation() {
             ipsum Loren ipsum
           </Text>
         </Flex>
-        <Flex
-          flex={1}
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          className="letsInvest"
-        >
+        <Flex alignItems="center" className="letsInvest" flexDir="column">
           <Image
             width={0}
             height={0}
             src="/letsInvest.svg"
             alt="Let's invest"
-            style={{ width: "8rem", height: "auto" }}
+            style={{ width: "auto", height: "9rem" }}
           />
           <Text
             textAlign="center"

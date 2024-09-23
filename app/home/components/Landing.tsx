@@ -43,10 +43,8 @@ export default function Landing() {
     <Flex
       alignItems="center"
       minHeight="100vh"
-      px="10.5vw"
       pt={["20vh", 0]}
       pb={["5vh", 0]}
-      width="100vw"
     >
       <Image
         src="/melbourne-city.jpg"

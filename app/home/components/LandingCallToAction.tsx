@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Flex, Box, Heading, Text, Button, Image, HStack } from "@kuma-ui/core";
+import { Flex, Text, Button, Image } from "@kuma-ui/core";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -12,7 +12,7 @@ export default function LandingCallToAction() {
 
   useEffect(() => {
     gsap.fromTo(
-      ".callToAction",
+      ".callToActionText",
       {
         y: 50,
         opacity: 0,
@@ -20,9 +20,23 @@ export default function LandingCallToAction() {
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: {
-          trigger: ".callToAction",
+          trigger: ".callToActionText",
+          toggleActions: "restart none none none",
+        },
+      }
+    );
+    gsap.fromTo(
+      ".callToActionButton",
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.15,
+        scrollTrigger: {
+          trigger: ".callToActionText",
           toggleActions: "restart none none none",
         },
       }
@@ -32,21 +46,23 @@ export default function LandingCallToAction() {
   return (
     <Flex
       mt="5vh"
-      px="10vw"
       mb="5vh"
       bg="#E5F0FF"
       flexDirection="column"
       alignItems="center"
       py="15vh"
+      borderRadius="2rem"
     >
       <Text
         textAlign="center"
         pb="2.5rem"
         fontWeight="bold"
-        className={[styles.header].join(" ")}
-        fontSize={["2rem", "3rem"]}
+        mx="10vw"
+        className="callToActionText"
+        fontSize={["2rem", "2rem"]}
       >
-        Connect with the right people now on Capital Connect
+        Join the group of investors and developers already doing business on
+        Capital Connect
       </Text>
       <Link href="https://app.capitalconnect.site">
         <Button
@@ -57,6 +73,7 @@ export default function LandingCallToAction() {
           borderRadius="1rem"
           fontWeight="bold"
           fontSize="1rem"
+          className="callToActionButton"
         >
           <Flex>
             <Text>Create your free account now</Text>

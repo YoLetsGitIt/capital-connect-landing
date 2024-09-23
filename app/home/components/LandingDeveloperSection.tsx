@@ -7,6 +7,34 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import Link from "next/link";
 
+function AnimationComponent() {
+  return (
+    <Flex flex={1} bg="red" display={["none", "relative"]} textAlign="center">
+      <Image
+        width={0}
+        height={0}
+        x={20}
+        src="highlight-message.svg"
+        style={{
+          width: "10rem",
+          height: "auto",
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+        }}
+      />
+      <Image
+        width={0}
+        height={0}
+        priority
+        src="/iphone.svg"
+        alt="Landing image"
+        style={{ width: "18rem", height: "auto" }}
+      />
+    </Flex>
+  );
+}
+
 export default function LandingDeveloperSection() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -52,14 +80,23 @@ export default function LandingDeveloperSection() {
       className="thirdSection"
       alignItems="center"
       height={["auto", "80vh"]}
-      px="10vw"
       py={["10vh", 0]}
       pb="10vh"
       bg="#FFFFFF"
     >
+      <Box flex={1} display="relative" textAlign="center">
+        <Image
+          width={0}
+          height={0}
+          priority
+          src="/iphone.svg"
+          alt="Landing image"
+          style={{ width: "18rem", height: "auto" }}
+        />
+      </Box>
       <Box className="presentationContent" flex={1.25} mr="2rem">
         <Heading fontWeight="bold" fontSize={["1.5rem", "2.5rem"]} mb="1rem">
-          Expose your project to many active investors
+          Show your project to many active investors
         </Heading>
         <Text fontSize="1.25rem" mb="2rem" color="#666666">
           List your project for our keen investors to view. Start conversations
@@ -114,17 +151,6 @@ export default function LandingDeveloperSection() {
             </Flex>
           </Button>
         </Link>
-      </Box>
-      <Box flex={1} display={["none", "block"]}>
-        <Image
-          width={0}
-          height={0}
-          className="presentationImage"
-          priority
-          src="/pitching.svg"
-          alt="Landing image"
-          style={{ width: "100%", height: "auto" }}
-        ></Image>
       </Box>
     </Flex>
   );

@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <Box width="100vw" className="footer" alignItems="center" py="3rem">
-      <Box px="5vw">
+      <Box px="10vw">
         <Flex alignItems="center" flexDirection="row" pb="0.5rem">
           <Image
             width={0}
@@ -20,7 +20,13 @@ const Footer = () => {
             Capital Connect
           </Text>
         </Flex>
-        <Text fontSize="0.75rem">Capital Connect Labs #43433516775</Text>
+        <Text fontSize="0.75rem" pb="2rem">
+          Capital Connect Labs #43433516775
+        </Text>
+        <Text fontSize="0.75rem" pb="0.5rem">
+          P : (+61) 401 863 530
+        </Text>
+        <Text fontSize="0.75rem">E : matthew.m.kwon@gmail.com</Text>
       </Box>
     </Box>
   );
