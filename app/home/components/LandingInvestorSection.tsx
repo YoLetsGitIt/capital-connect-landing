@@ -94,11 +94,6 @@ export default function LandingInvestorSection() {
         },
       }
     );
-    // gsap.fromTo(
-    //   "#search",
-    //   { opacity: 1 },
-    //   { opacity: 0, duration: 0.5, delay: 9.5, repeat: -1 }
-    // );
     gsap.to("#search", {
       motionPath: {
         path: [
@@ -128,6 +123,7 @@ export default function LandingInvestorSection() {
       height={["auto", "80vh"]}
       pt={["10vh", 0]}
       bg="#FFFFFF"
+      textAlign={["center", "left"]}
     >
       <Box className="searchContent" flex={1}>
         <Heading fontWeight="bold" fontSize={["1.5rem", "2.5rem"]} mb="1rem">
@@ -167,14 +163,18 @@ export default function LandingInvestorSection() {
             color="#FFFFFF"
             mt="1rem"
             py="1rem"
-            px="1.5rem"
             borderRadius="1rem"
             fontWeight="bold"
             fontSize="1rem"
             borderWidth={2}
             borderColor="#CCE2FF"
           >
-            <Flex alignItems="center">
+            <Flex
+              alignItems="center"
+              pl="1.5rem"
+              pr="1.5rem"
+              transition="all 0.3s"
+            >
               <Text>View projects</Text>
               <Image
                 width={0}

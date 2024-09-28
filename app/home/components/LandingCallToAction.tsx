@@ -5,7 +5,6 @@ import { Flex, Text, Button, Image } from "@kuma-ui/core";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import styles from "../../page.module.css";
 
 export default function LandingCallToAction() {
   gsap.registerPlugin(ScrollTrigger);

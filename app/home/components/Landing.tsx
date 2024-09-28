@@ -37,13 +37,14 @@ export default function Landing() {
     );
   }, []);
 
-  const [buttonHover, setButtonHover] = useState(false);
+  const [investorButtonHover, setInvestorButtonHover] = useState(false);
+  const [developerButtonHover, setDeveloperButtonHover] = useState(false);
 
   return (
     <Flex
       alignItems="center"
       minHeight="100vh"
-      pt={["20vh", 0]}
+      pt={["10vh", 0]}
       pb={["5vh", 0]}
     >
       <Image
@@ -87,6 +88,7 @@ export default function Landing() {
           developers.
         </Text>
         <Flex
+          flexDirection={["column", "row"]}
           alignItems="center"
           justifyContent="center"
           gap="2.5rem"
@@ -95,18 +97,20 @@ export default function Landing() {
         >
           <a href="https://app.capitalconnect.site">
             <Button
-              bg="#002C66"
+              bg={investorButtonHover ? "#003780" : "#002C66"}
               color="#FFFFFF"
               py="1rem"
               px="1.5rem"
               borderRadius="1rem"
+              transitionTimingFunction="ease-in"
+              transition="0.3s"
               fontWeight="bold"
               fontSize="1rem"
               borderWidth={2}
               borderColor="#CCE2FF"
-              mb={["2rem", 0]}
-              onMouseOver={() => setButtonHover(true)}
-              onMouseOut={() => setButtonHover(false)}
+              mb={["1rem", 0]}
+              onMouseOver={() => setInvestorButtonHover(true)}
+              onMouseOut={() => setInvestorButtonHover(false)}
             >
               <Flex alignItems="center">
                 <Text>I'm an investor</Text>
@@ -127,18 +131,20 @@ export default function Landing() {
           </a>
           <a href="https://app.capitalconnect.site">
             <Button
-              bg="#002C66"
+              bg={developerButtonHover ? "#003780" : "#002C66"}
               color="#FFFFFF"
               py="1rem"
               px="1.5rem"
               borderRadius="1rem"
+              transitionTimingFunction="ease-in"
+              transition="0.3s"
               fontWeight="bold"
               fontSize="1rem"
               borderWidth={2}
               borderColor="#CCE2FF"
               mb={["2rem", 0]}
-              onMouseOver={() => setButtonHover(true)}
-              onMouseOut={() => setButtonHover(false)}
+              onMouseOver={() => setDeveloperButtonHover(true)}
+              onMouseOut={() => setDeveloperButtonHover(false)}
             >
               <Flex alignItems="center">
                 <Text>I'm a developer</Text>

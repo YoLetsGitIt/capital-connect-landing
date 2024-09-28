@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <Box width="100vw" className="footer" alignItems="center" py="3rem">
-      <Box px="10vw">
+      <Box px={["2.5vw", "10vw"]}>
         <Flex alignItems="center" flexDirection="row" pb="0.5rem">
           <Image
             width={0}

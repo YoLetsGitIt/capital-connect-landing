@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Text, Button } from "@kuma-ui/core";
+import { Box, Flex, Text } from "@kuma-ui/core";
 import Link from "@/node_modules/next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -12,23 +12,16 @@ export const Navbar = ({
   background: string;
   dark: boolean;
 }) => {
-  const [show, setShow] = useState(true);
   const [atTop, setAtTop] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [pricingHover, setPricingHover] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [mobilePricingExpanded, setMobilePricingExpanded] = useState(false);
 
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      // if scroll down hide the navbar
-      console.log("hello", window.scrollY);
-      setShow(false);
-    } else {
-      // if scroll up show the navbar
-      setShow(true);
-    }
+  const [developerButtonHover, setDeveloperButtonHover] = useState(false);
+  const [investorButtonHover, setInvestorButtonHover] = useState(false);
 
+  const controlNavbar = () => {
     if (window.scrollY <= 0) {
       setAtTop(true);
     } else {
@@ -167,7 +160,13 @@ export const Navbar = ({
             width={0}
             height={0}
             priority
-            src={expanded ? "/cross.svg" : "/menu.svg"}
+            src={
+              expanded
+                ? "/cross.svg"
+                : navbarDark
+                ? "/menu.svg"
+                : "/menu-white.svg"
+            }
             alt="Logo"
             style={{
               width: expanded ? "1rem" : "1.5rem",
@@ -194,36 +193,8 @@ export const Navbar = ({
             borderColor: "grey",
           }}
         />
+        {/* mobile  */}
         <Box px="5vw" pt="1.5rem">
-          {/* <Link
-            href="/developers"
-            style={{ textDecoration: "none", color: "#000000" }}
-          >
-            <Text
-              fontSize="1.25rem"
-              fontWeight="bold"
-              pb="1.5rem"
-              color="#808080"
-            >
-              Developers
-            </Text>
-          </Link>
-          <Link
-            href="/investors"
-            style={{
-              textDecoration: "none",
-              color: "#000000",
-            }}
-          >
-            <Text
-              fontSize="1.25rem"
-              fontWeight="bold"
-              pb="1.5rem"
-              color="#808080"
-            >
-              Investors
-            </Text>
-          </Link> */}
           <Box onClick={() => setMobilePricingExpanded(!mobilePricingExpanded)}>
             <Flex justify="space-between" alignItems="center" pb="1.5rem">
               <Text
@@ -253,6 +224,7 @@ export const Navbar = ({
           </Box>
           <Box
             style={{
+              flex: 1,
               transition: "all .3s",
               display: mobilePricingExpanded ? "block" : "none",
               opacity: mobilePricingExpanded ? 1 : 0,
@@ -288,32 +260,33 @@ export const Navbar = ({
                 </Link>
               </Box>
               <Box flex={1}>
-                <Link
-                  href="/pricing"
-                  style={{ textDecoration: "none", color: "#000000" }}
+                <Box
+                  flex={1}
+                  bg={investorButtonHover ? "#000000" : "#E5F0FF"}
+                  _hover={{ cursor: "pointer", bg: "#FFFFFF" }}
+                  borderRadius="1rem"
+                  p="1.5rem"
                 >
-                  <Box flex={1} bg="#E5F0FF" borderRadius="1rem" p="1.5rem">
-                    <Flex alignItems="center" pb="0.5rem">
-                      <Text fontWeight="bold" mr="0.5rem">
-                        Investors
-                      </Text>
-                      <Image
-                        width={0}
-                        height={0}
-                        priority
-                        src={"/money.svg"}
-                        alt="Logo"
-                        style={{
-                          width: "1rem",
-                          height: "auto",
-                        }}
-                      />
-                    </Flex>
-                    <Text>
-                      Find plans to help you find projects you want to invest in
+                  <Flex alignItems="center" pb="0.5rem">
+                    <Text fontWeight="bold" mr="0.5rem">
+                      Investors
                     </Text>
-                  </Box>
-                </Link>
+                    <Image
+                      width={0}
+                      height={0}
+                      priority
+                      src={"/money.svg"}
+                      alt="Logo"
+                      style={{
+                        width: "1rem",
+                        height: "auto",
+                      }}
+                    />
+                  </Flex>
+                  <Text>
+                    Find plans to help you find projects you want to invest in
+                  </Text>
+                </Box>
               </Box>
             </Flex>
           </Box>
@@ -346,6 +319,7 @@ export const Navbar = ({
           </Box>
         </Box>
       </Box>
+      {/* web */}
       <Box
         pt={atTop ? "1rem" : 0}
         px="10vw"
@@ -354,8 +328,8 @@ export const Navbar = ({
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
         style={{
-          transition: "all .3s",
-          visibility: pricingHover ? "visible" : "hidden",
+          transition: "all .7s",
+          display: pricingHover ? "block" : "none",
           opacity: pricingHover ? 1 : 0,
         }}
       >
@@ -374,7 +348,14 @@ export const Navbar = ({
               href="/pricing-developer"
               style={{ textDecoration: "none", color: "#000000" }}
             >
-              <Box flex={1} bg="#E5F0FF" borderRadius="1rem" p="3rem">
+              <Box
+                flex={1}
+                bg="#E5F0FF"
+                borderRadius="1rem"
+                p="3rem"
+                transition="all 0.3s"
+                _hover={{ bg: "#B8D6FF" }}
+              >
                 <Image
                   width={0}
                   height={0}
@@ -398,7 +379,14 @@ export const Navbar = ({
               href="/pricing"
               style={{ textDecoration: "none", color: "#000000" }}
             >
-              <Box flex={1} bg="#E5F0FF" borderRadius="1rem" p="3rem">
+              <Box
+                flex={1}
+                bg="#E5F0FF"
+                borderRadius="1rem"
+                p="3rem"
+                transition="all 0.3s"
+                _hover={{ bg: "#B8D6FF" }}
+              >
                 <Image
                   width={0}
                   height={0}

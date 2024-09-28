@@ -77,9 +77,9 @@ export default function Home() {
   return (
     <Box width="100vw">
       <Navbar background="#CCE2FF" dark={false} />
-      <Box px="10vw" flexDirection="column">
+      <Box px={["2.5vw", "10vw"]} flexDirection="column">
         <Landing />
-        <Explanation />
+        {/* <Explanation /> */}
         <LandingInvestorSection />
         {/* <LandingDeveloperSection /> */}
         <LandingCallToAction />
