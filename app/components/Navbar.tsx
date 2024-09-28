@@ -260,33 +260,38 @@ export const Navbar = ({
                 </Link>
               </Box>
               <Box flex={1}>
-                <Box
-                  flex={1}
-                  bg={investorButtonHover ? "#000000" : "#E5F0FF"}
-                  _hover={{ cursor: "pointer", bg: "#FFFFFF" }}
-                  borderRadius="1rem"
-                  p="1.5rem"
+                <Link
+                  href="/pricing"
+                  style={{ textDecoration: "none", color: "#000000" }}
                 >
-                  <Flex alignItems="center" pb="0.5rem">
-                    <Text fontWeight="bold" mr="0.5rem">
-                      Investors
+                  <Box
+                    flex={1}
+                    bg={investorButtonHover ? "#000000" : "#E5F0FF"}
+                    _hover={{ cursor: "pointer", bg: "#FFFFFF" }}
+                    borderRadius="1rem"
+                    p="1.5rem"
+                  >
+                    <Flex alignItems="center" pb="0.5rem">
+                      <Text fontWeight="bold" mr="0.5rem">
+                        Investors
+                      </Text>
+                      <Image
+                        width={0}
+                        height={0}
+                        priority
+                        src={"/money.svg"}
+                        alt="Logo"
+                        style={{
+                          width: "1rem",
+                          height: "auto",
+                        }}
+                      />
+                    </Flex>
+                    <Text>
+                      Find plans to help you find projects you want to invest in
                     </Text>
-                    <Image
-                      width={0}
-                      height={0}
-                      priority
-                      src={"/money.svg"}
-                      alt="Logo"
-                      style={{
-                        width: "1rem",
-                        height: "auto",
-                      }}
-                    />
-                  </Flex>
-                  <Text>
-                    Find plans to help you find projects you want to invest in
-                  </Text>
-                </Box>
+                  </Box>
+                </Link>
               </Box>
             </Flex>
           </Box>

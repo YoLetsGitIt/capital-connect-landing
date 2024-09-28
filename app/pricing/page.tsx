@@ -38,18 +38,30 @@ export default function Pricing() {
         </HStack>
         <HStack pb="1rem">
           <Box flex={4}>
-            <Text color="#FFFFFF" fontWeight="bold" fontSize="1.75rem">
+            <Text
+              color="#FFFFFF"
+              fontWeight="bold"
+              fontSize={["1rem", "1.75rem"]}
+            >
               Key functionality
             </Text>
           </Box>
           <Flex flex={1} justify="center" px="1rem">
-            <Text color="#FFFFFF" fontWeight="bold" fontSize="1.75rem">
+            <Text
+              color="#FFFFFF"
+              fontWeight="bold"
+              fontSize={["1rem", "1.75rem"]}
+            >
               Free
             </Text>
           </Flex>
           <Box flex={1}>
             <Flex flex={1} alignItems="flex-end" justify="center">
-              <Text color="#FFFFFF" fontWeight="bold" fontSize="1.75rem">
+              <Text
+                color="#FFFFFF"
+                fontWeight="bold"
+                fontSize={["1rem", "1.75rem"]}
+              >
                 $399
               </Text>
               <Text color="#FFFFFF" fontWeight="bold" fontSize="1rem">
@@ -72,12 +84,11 @@ export default function Pricing() {
             py="0.5rem"
           >
             <Image
-              width={0}
+              width={["1.5rem", "2.5rem"]}
               height={0}
               src={"/tick.svg"}
               alt="Logo"
               style={{
-                width: "2.5rem",
                 height: "auto",
               }}
             />
@@ -92,12 +103,11 @@ export default function Pricing() {
               py="0.5rem"
             >
               <Image
-                width={0}
+                width={["1.5rem", "2.5rem"]}
                 height={0}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
-                  width: "2.5rem",
                   height: "auto",
                 }}
               />
@@ -118,12 +128,11 @@ export default function Pricing() {
             py="0.5rem"
           >
             <Image
-              width={0}
+              width={["1.5rem", "2.5rem"]}
               height={0}
               src={"/tick.svg"}
               alt="Logo"
               style={{
-                width: "2.5rem",
                 height: "auto",
               }}
             />
@@ -138,12 +147,11 @@ export default function Pricing() {
               py="0.5rem"
             >
               <Image
-                width={0}
+                width={["1.5rem", "2.5rem"]}
                 height={0}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
-                  width: "2.5rem",
                   height: "auto",
                 }}
               />
@@ -164,12 +172,11 @@ export default function Pricing() {
             py="0.5rem"
           >
             <Image
-              width={0}
+              width={["1.5rem", "2.5rem"]}
               height={0}
               src={"/tick.svg"}
               alt="Logo"
               style={{
-                width: "2.5rem",
                 height: "auto",
               }}
             />
@@ -184,12 +191,11 @@ export default function Pricing() {
               py="0.5rem"
             >
               <Image
-                width={0}
+                width={["1.5rem", "2.5rem"]}
                 height={0}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
-                  width: "2.5rem",
                   height: "auto",
                 }}
               />
@@ -210,12 +216,11 @@ export default function Pricing() {
             py="0.5rem"
           >
             <Image
-              width={0}
+              width={["1.5rem", "2.5rem"]}
               height={0}
               src={"/tick.svg"}
               alt="Logo"
               style={{
-                width: "2.5rem",
                 height: "auto",
               }}
             />
@@ -230,12 +235,11 @@ export default function Pricing() {
               py="0.5rem"
             >
               <Image
-                width={0}
+                width={["1.5rem", "2.5rem"]}
                 height={0}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
-                  width: "2.5rem",
                   height: "auto",
                 }}
               />
@@ -256,12 +260,11 @@ export default function Pricing() {
             py="0.5rem"
           >
             <Image
-              width={0}
+              width={["1.5rem", "2.5rem"]}
               height={0}
               src={"/remove.svg"}
               alt="Logo"
               style={{
-                width: "2.5rem",
                 height: "auto",
               }}
             />
@@ -276,12 +279,11 @@ export default function Pricing() {
               py="0.5rem"
             >
               <Image
-                width={0}
+                width={["1.5rem", "2.5rem"]}
                 height={0}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
-                  width: "2.5rem",
                   height: "auto",
                 }}
               />
@@ -302,12 +304,11 @@ export default function Pricing() {
             py="0.5rem"
           >
             <Image
-              width={0}
+              width={["1.5rem", "2.5rem"]}
               height={0}
               src={"/remove.svg"}
               alt="Logo"
               style={{
-                width: "2.5rem",
                 height: "auto",
               }}
             />
@@ -322,12 +323,11 @@ export default function Pricing() {
               py="0.5rem"
             >
               <Image
-                width={0}
+                width={["1.5rem", "2.5rem"]}
                 height={0}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
-                  width: "2.5rem",
                   height: "auto",
                 }}
               />
@@ -348,12 +348,11 @@ export default function Pricing() {
             py="0.5rem"
           >
             <Image
-              width={0}
+              width={["1.5rem", "2.5rem"]}
               height={0}
               src={"/remove.svg"}
               alt="Logo"
               style={{
-                width: "2.5rem",
                 height: "auto",
               }}
             />
@@ -368,12 +367,11 @@ export default function Pricing() {
               py="0.5rem"
             >
               <Image
-                width={0}
+                width={["1.5rem", "2.5rem"]}
                 height={0}
                 src={"/tick.svg"}
                 alt="Logo"
                 style={{
-                  width: "2.5rem",
                   height: "auto",
                 }}
               />
@@ -388,7 +386,13 @@ export default function Pricing() {
           mb="4rem"
           alignItems="center"
         >
-          <Text flex={1} color="#FFFFFF" fontWeight="bold" fontSize="1.5rem">
+          <Text
+            flex={1}
+            color="#FFFFFF"
+            fontWeight="bold"
+            fontSize={["1.25rem", "1.5rem"]}
+            mr="1rem"
+          >
             Ready to get started?
           </Text>
           <a
