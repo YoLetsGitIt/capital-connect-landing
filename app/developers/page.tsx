@@ -294,7 +294,7 @@ export default function Developers() {
           </Box>
         </Flex>
       </Box>
-      <Footer background="#CCE2FF" />
+      <Footer />
     </Box>
   );
 }

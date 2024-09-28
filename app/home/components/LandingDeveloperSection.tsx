@@ -7,34 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import Link from "next/link";
 
-function AnimationComponent() {
-  return (
-    <Flex flex={1} bg="red" display={["none", "relative"]} textAlign="center">
-      <Image
-        width={0}
-        height={0}
-        x={20}
-        src="highlight-message.svg"
-        style={{
-          width: "10rem",
-          height: "auto",
-          position: "absolute",
-          bottom: 0,
-          right: 0,
-        }}
-      />
-      <Image
-        width={0}
-        height={0}
-        priority
-        src="/iphone.svg"
-        alt="Landing image"
-        style={{ width: "18rem", height: "auto" }}
-      />
-    </Flex>
-  );
-}
-
 export default function LandingDeveloperSection() {
   gsap.registerPlugin(ScrollTrigger);
 

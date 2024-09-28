@@ -70,7 +70,7 @@ export default function Investors() {
           />
         </Box>
       </Flex>
-      <Footer background="#CCE2FF" />
+      <Footer />
     </Box>
   );
 }

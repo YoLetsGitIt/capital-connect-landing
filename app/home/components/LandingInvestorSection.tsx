@@ -201,6 +201,7 @@ export default function LandingInvestorSection() {
         <Image
           width={0}
           height={0}
+          alt="search"
           src="/search-white.svg"
           style={{
             opacity: 0,
