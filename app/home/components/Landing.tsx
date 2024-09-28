@@ -113,7 +113,7 @@ export default function Landing() {
               onMouseOut={() => setInvestorButtonHover(false)}
             >
               <Flex alignItems="center">
-                <Text>I'm an investor</Text>
+                <Text>I&apos;m an investor</Text>
                 <Image
                   width={0}
                   height={0}
@@ -147,7 +147,7 @@ export default function Landing() {
               onMouseOut={() => setDeveloperButtonHover(false)}
             >
               <Flex alignItems="center">
-                <Text>I'm a developer</Text>
+                <Text>I&apos;m a developer</Text>
                 <Image
                   width={0}
                   height={0}

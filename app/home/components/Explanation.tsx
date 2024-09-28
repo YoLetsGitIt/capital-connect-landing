@@ -141,7 +141,7 @@ export default function Explanation() {
             fontWeight="500"
             pb="1rem"
           >
-            Let's Invest
+            Let&apos;s Invest
           </Text>
           <Text textAlign="center" px="5rem" color="#808080">
             Loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren
